@@ -1,0 +1,99 @@
+@import url('https://fonts.googleapis.com/css?family=Montserrat');
+
+.customtitle {
+	font-family: 'Montserrat', sans-serif;
+	font-size: 20px;
+	color: #8FBC8F;
+}
+
+.customcaixa {
+	font-family: 'Montserrat', sans-serif;
+	font-size: 15px;
+	text-transform: uppercase;
+	background-color: #E1ECE1;
+	width: 350px;
+	margin-top: 20px;
+	padding: 6px 6px 6px 6px;
+	text-align: center;
+}
+
+.customlink {
+	font-size: 18px;
+	color: #8FBC8F;
+	margin-left: 4px;
+}
+
+.customlink:hover {
+	text-decoration: none;
+	color: #8FBC8F;
+}
+
+.customtitle:hover {
+	text-decoration: none;
+	color: #8FBC8F;
+}
+
+.customtitle:disabled {
+	text-decoration: none;
+	color: #8FBC8F;
+}
+.custominput {
+	margin-right: 4px;
+}
+
+.customblock{
+	padding-right: 10px;
+	padding-top: 10px;
+	margin-top: 40px;
+	margin-right: 10px;
+}
+
+.customfooter {
+	font-size: 13px;
+	text-align: center;
+	padding-top:10px;
+	padding-bottom: 5px;
+	margin: auto;
+	width: 100%;
+	height: 50px;
+	bottom: 0;
+	position: fixed;
+	background-color: lightgrey;
+}
+
+.custombtn {
+  font-weight: 400;
+  color: #418641;
+  background-color: #E1ECE1;
+
+  margin-right: 2px;
+  margin-left: 4px;
+  margin-bottom: 2px;
+}
+
+.btn.custombtn:hover {
+  color: #8FBC8F;
+  text-decoration: none;
+  background-color: #E1ECE1;
+  border-color: transparent;
+}
+
+.btn.custombtn:focus, .custombtn.focus {
+  border-color: transparent;
+  box-shadow: none;
+}
+
+.btn.custombtn:disabled, .custombtn.disabled {
+  color: #33cc33;
+}
+
+.custommenusmall {
+	width: 23%;
+	white-space: normal;
+	font-size:12px;
+	margin-right: 1px;
+}
+
+
+
+
