@@ -31,10 +31,6 @@
 		</div>
 
 		<div class="form-group">
-			<input type="text" id="txt-documento" name="txt-documento" class="form-control" value="<?php echo set_value('txt-documento', $documento);?>">
-		</div>
-
-		<div class="form-group">
 			<label>Categoria</label>
 			<select class="browser-default" id="categoria" name="categoria" value="<?php echo set_value('categoria', $categoria);?>">
 			<?php
