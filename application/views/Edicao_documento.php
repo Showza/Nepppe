@@ -7,7 +7,8 @@
             $titulo = $row->titulo;
             $resumo = $row->resumo;
             $conteudo = $row->conteudo;
-            $categoria = $row->categoria;         
+            $categoria = $row->categoria; 
+            $documento = $row->documento;        
             
           }
       ?>
@@ -27,6 +28,10 @@
 
 		<div class="form-group">
 			<input type="text" id="txt-conteudo" name="txt-conteudo" class="form-control" placeholder="Conteúdo" value="<?php echo set_value('txt-conteudo', $conteudo);?>">
+		</div>
+
+		<div class="form-group">
+			<input type="text" id="txt-documento" name="txt-documento" class="form-control" value="<?php echo set_value('txt-documento', $documento);?>">
 		</div>
 
 		<div class="form-group">

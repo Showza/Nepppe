@@ -35,17 +35,20 @@ class Documentos extends CI_Controller {
 		$this->form_validation->set_rules('txt-titulo', 'Título do documento', 'required|is_unique[documentos.titulo]');
 		$this->form_validation->set_rules('txt-resumo', 'Resumo do documento', 'required'); 
 		$this->form_validation->set_rules('txt-conteudo', 'Conteúdo do documento', 'required');
+		$this->form_validation->set_rules('txt-documento', 'Nome do documento', 'required'); 
+
 
 		$titulo= $this->input->post('txt-titulo');
 		$resumo= $this->input->post('txt-resumo');
 		$conteudo= $this->input->post('txt-conteudo');
 		$categoria= filter_input(INPUT_POST,"categoria",FILTER_SANITIZE_STRING);
 		$arquivo= $_FILE['arquivo'];
+		$documento= $this->input->post('txt-documento');
 
 		$configuracao = array(
          'upload_path'   => './documentos/',
-         'allowed_types' => 'pdf|zip|rar',
-         'file_name'     => $titulo,
+         'allowed_types' => 'pdf|zip|rar|doc|docx|odc|txt|csv',
+         'file_name'     => $documento,
          'max_size'      => '5000'
         );   
 		
@@ -57,7 +60,7 @@ class Documentos extends CI_Controller {
 		}else{
 			
 			if ($this->upload->do_upload('arquivo')){
-				if ($this->modeldocumentos->adicionar($titulo, $resumo, $conteudo, $categoria)) 
+				if ($this->modeldocumentos->adicionar($titulo, $resumo, $conteudo, $categoria, $documento)) 
          			echo 'Arquivo salvo com sucesso.';
     			else
          			echo $this->upload->display_errors();
@@ -73,6 +76,7 @@ class Documentos extends CI_Controller {
         $this->form_validation->set_rules('txt-titulo', 'Título do documento', 'required');
 		$this->form_validation->set_rules('txt-resumo', 'Resumo do documento', 'required');
 		$this->form_validation->set_rules('txt-conteudo', 'Conteúdo do documento', 'required');
+		$this->form_validation->set_rules('txt-documento', 'Nome do documento', 'required'); 
 
 		if($this->form_validation->run() == FALSE){
 			$this->pagina_edicao($id);
@@ -80,9 +84,10 @@ class Documentos extends CI_Controller {
             $titulo= $this->input->post('txt-titulo');
 			$resumo= $this->input->post('txt-resumo');
 			$conteudo= $this->input->post('txt-conteudo');
-            $categoria= filter_input(INPUT_POST,"categoria",FILTER_SANITIZE_STRING);			           
+            $categoria= filter_input(INPUT_POST,"categoria",FILTER_SANITIZE_STRING);
+            $documento= $this->input->post('txt-documento');			           
 					
-			if ($this->modeldocumentos->atualizar($titulo, $resumo, $conteudo, $categoria, $id)){
+			if ($this->modeldocumentos->atualizar($titulo, $resumo, $conteudo, $categoria, $id, $documento)){
 				redirect(site_url('Usuarios/auxiliar'));
 			}else{
 				echo "Houve um erro no sistema";

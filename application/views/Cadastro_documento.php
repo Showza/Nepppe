@@ -33,6 +33,11 @@
 				  </select>
 			  	</div>
 
+			  	<div class="form-group">
+					<input type="text" id="txt-documento" name="txt-documento" class="form-control" placeholder="Nome do arquivo" value="<?php echo set_value('txt-documento') ?>">
+					<label>Não use caracteres especiais e espaço para o nome do arquivo</label>
+				</div>
+
 			  	<br><div class="form-group">
 					<input type="file" id="arquivo" name="arquivo" class="form-control" value="<?php echo set_value('file') ?>" />
 				</div>

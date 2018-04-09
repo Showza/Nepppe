@@ -75,6 +75,7 @@
             <tr>
               <th scope="col">Título</th>
               <th>Categoria</th>
+              <th>Download</th>
               <th>Opção</th>
               
             </tr>
@@ -87,6 +88,9 @@
             <tr>
               <th scope="row"><?php echo $row->titulo;?></th>
               <td><?php echo $row->categoria;?></td>
+              <td>
+                <a class="customlink" href="<?php echo base_url('/documentos/'.$row->documento)?>">Arquivo</a>
+              </td>
               <td>
                 <a class="customlink" title="Excluir evento" href="<?php echo site_url('Documentos/excluir/'.$row->id)?>"><i class="material-icons">delete</i></a>          
                 <a class="customlink" title="Atualizar evento" href="<?php echo site_url('Documentos/pagina_edicao/'.$row->id)?>"><i class="material-icons">create</i></a>
