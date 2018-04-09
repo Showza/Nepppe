@@ -1,25 +1,28 @@
-<nav>
-    <div class="nav-wrapper grey lighten-4">
-      <a href="#!" class="brand-logo"><span class="red-text">&nbsp &nbsp Nepppe</span></a>
-
-      <a href="#" data-activates="menu-mobile" class="button-collapse">
-      <i class="material-icons red-text">menu</i>
-      </a>
-
-      <ul class="right hide-on-med-and-down">
-        <li><a  href="<?php echo site_url('Inicial')?>" class="waves-effect waves-light red btn">Principal</a></li>
-        <li><a  href="<?php echo site_url('Inicial/sobre')?>" class="waves-effect waves-light red btn">Sobre</a></li>
-        <li><a  href="<?php echo site_url('Inicial/equipe')?>" class="waves-effect waves-light red btn">Equipe</a></li>
-        <li><a  href="<?php echo site_url('Inicial/contato')?>" class="waves-effect waves-light red btn">Contato</a></li>    
-    </ul>
-
-    <ul class="side-nav" id="menu-mobile">
-        <li><a  href="#">Principal</a></li>
-        <li><a  href="#">Sobre</a></li>
-        <li><a  href="#">Equipe</a></li>
-        <li><a  href="#">Contato</a></li>    
-    </ul>
-
-
+<!--Menu do nepppe-->
+  <div class="container">
+     <div class="row">
+      <div class="col">
+        <img src="<?php echo base_url('/assets/frontend/img/logomarca.png');?>" class="img-fluid">
+      </div>
+      <div class="col">
+        <a class="btn btn-red btn-block" role="button" href="<?php echo site_url('index')?>" style="color: #ffffff; 
+  background-color: #790505; border-color: #790505; margin-top: 30px;">Início</a>
+      </div>
+      <div class="col">
+        <a class="btn btn-red btn-block" role="button" href="<?php echo site_url('sobre')?>" style="color: #ffffff; 
+  background-color: #790505; border-color: #790505; margin-top: 30px;">Sobre</a>
+      </div>
+      <div class="col">
+        <a class="btn btn-red btn-block" role="button" href="<?php echo site_url('pessoas')?>" style="color: #ffffff; 
+  background-color: #790505; border-color: #790505; margin-top: 30px;">Pessoas</a>
+      </div>
+      <div class="col">
+        <a class="btn btn-red btn-block" role="button" href="<?php echo site_url('contato')?>" style="color: #ffffff; 
+  background-color: #790505; border-color: #790505; margin-top: 30px;">Contato</a>
+      </div>    
+     </div>
   </div>
-</nav>
+
+</head>
+
+<body>
