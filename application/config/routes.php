@@ -58,6 +58,14 @@ $route['documento'] = 'Documentos/cadastro_documento';
 
 $route['logout'] = 'Usuarios/logout';
 $route['login'] = 'Usuarios';
+
+$route['index'] = 'Inicial';
+$route['pessoas'] = 'Inicial/equipe';
+$route['contato'] = 'Inicial/contato';
+$route['sobre'] = 'Inicial/sobre';
+
+
+
 $route['404_override'] = '';
 $route['translate_uri_dashes'] = FALSE;
 
