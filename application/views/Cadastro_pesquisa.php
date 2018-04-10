@@ -1,6 +1,7 @@
 <div class="col-md-4"></div>
 <div class="container col-md-4">
     <header class="text-center"><br><br>
+    	<img src="<?php echo base_url('/assets/frontend/img/logomarca.png');?>" class="img-fluid" width="200px" style="margin-bottom: 20px;">
         <h4>Cadastro de pesquisa</h4>
     </header>
 			<div class="templatemo-login-form">
@@ -28,7 +29,7 @@
 				  </select>
 			  	</div>
 
-				<br><button type="submit" class="btn btn-lg btn-success btn-block">Cadastrar</button>
+				<br><button type="submit" class="btn btn-lg btn-success btn-block" style="color: #ffffff; background-color: #790505; border-color: #790505; margin-top: 30px;">Cadastrar</button>
 				<?php echo form_close(); ?>
 			</div>
 	</div>

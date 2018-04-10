@@ -1,4 +1,14 @@
-<div class="container">
+<div class="container" align="center">
+    <p><h3>NEPPPE​/CNPq​ - Núcleo de Estudos e Pesquisas em Políticas Públicas de Educação</h3></p>
+    <p>Programa de Pós-graduação em Educação<br>
+    I​CHS/UFOP<br>
+​         nepppe.ufop@gmail.com<br>
+​     Rua do Seminário, s/n, Mariana- MG​</p>
+    
+</div>
+</div>
+
+  <!-- Formulário
   <div class="row">
     <h1 class="red-text">Formulário para contato</h1>
     <?php
@@ -37,5 +47,5 @@
     <button type="submit" class="btn btn-lg btn-success btn-block">Enviar</button>    
     <?php echo form_close(); ?>
   </div>
+-->
 
-</div>
