@@ -44,8 +44,10 @@
     <div id="map"></div>
       <script>
         function initMap() {
+          // Determina as coordenadas geograficas de Outo Preto
           var uluru = {lat:  -20.3856, lng: -43.5035};
           var map = new google.maps.Map(document.getElementById('map'), {
+            // Configura o zoon no Google Maps
             zoom: 16,
             center: uluru
           });
