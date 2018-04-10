@@ -1,6 +1,8 @@
 <div class="col-md-4"></div>
 <div class="container col-md-4">
     <header class="text-center"><br><br>
+    	<img src="<?php echo base_url('/assets/frontend/img/logomarca.png');?>" class="img-fluid" width="200px" style="margin-bottom: 20px;">
+    	<br>
         <h4>Cadastro no sistema</h4>
     </header>
 			<div class="templatemo-login-form">
@@ -35,7 +37,7 @@
 				<div class="form-group">
 					<input type="password" id="txt-confir-senha" name="txt-confir-senha" class="form-control" placeholder="Confirmação de senha">
 				</div>
-				<button type="submit" class="btn btn-lg btn-success btn-block">Cadastrar</button>
+				<button type="submit" class="btn btn-lg btn-success btn-block" style="color: #ffffff; background-color: #790505; border-color: #790505; margin-top: 30px;">Cadastrar</button>
 				<?php echo form_close(); ?>
 			</div>
 	</div>
