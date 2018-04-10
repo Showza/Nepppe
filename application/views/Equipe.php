@@ -36,7 +36,7 @@
 					<li>Gustavo Henrique Trajano de Lima - História/ICHS/UFOP - <a href="http://lattes.cnpq.br/9833786960754216">lattes</a></li>
 					<li>Roberto Fernandes Ferreira - Artes Cênicas/DEART/UFOP - <a href="http://lattes.cnpq.br/0070355391163179">lattes</a></li>
 					<li>Mateus Versieux de Souza - História/ICHS/UFOP - <a href="http://lattes.cnpq.br/1367064713393841">lattes</a></li>
-					<li>​J​oao Luiz Batista Meneghini - Pedagogia/ICHS/UFOP <a herf="http://lattes.cnpq.br/5375302418960744">lattes</a></li>
+					<li>​J​oão Luiz Batista Meneghini - Pedagogia/ICHS/UFOP - <a href="http://lattes.cnpq.br/5375302418960744">lattes</a></li>
 
 				</ul>
 			</div>
