@@ -1,3 +1,7 @@
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+
 <div class="container-fluid">
   <div class="row">
     <div class="col" style="color:#ffffff; background-color:#790505; border-color:#790505;">
@@ -13,7 +17,128 @@
 </div>
 
 
+<div class="container">
+  <h2>Pesquisas</h2>
+  <ul class="nav nav-tabs">
+    <li class="active"><a data-toggle="tab" href="#eventos" style="color: #ffffff; background-color: #790505; border-color: #790505;">Eventos</a></li>
+    <li><a data-toggle="tab" href="#pesquisas" style="color: #ffffff; background-color: #790505; border-color: #790505;">Pesquisas</a></li>
+    <li><a data-toggle="tab" href="#documentos" style="color: #ffffff; background-color: #790505; border-color: #790505;">Documentos</a></li>
+  </ul>
 
+  <div class="tab-content">
+    <div id="eventos" class="tab-pane fade active in">
+      <!--Tabela de eventos-->
+      <div class="container-fluid">
+        <div class="row">
+          <div class="col" style="margin-top: 10px; margin-bottom: 10px;">
+            <table class="table table-striped" style="margin-top: 0px">
+                <thead style="color: #ffffff; background-color: #790505; border-color: #790505;">
+                  <tr>
+                    <th scope="col">Título</th>
+                    <th>Resumo</th>
+                    <th>Data</th>
+                    <th>Opção</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <?php
+                      $query = $this->db->get('eventos');
+                      foreach ($query->result() as $row) {
+                      ?>
+                  <tr>
+                    <th scope="row"><?php echo $row->titulo;?></th>
+                    <td><?php echo $row->resumo;?></td>
+                    <td><?php echo $row->data;?> </td>
+                    <td>
+                      <div class="col">
+                        <a class="customlink" title="Atualizar evento" href="<?php echo site_url('Eventos/pagina_edicao/'.$row->id)?>"><i class="material-icons">Editar</i></a> 
+                      </div>
+                      <div class="col">
+                        <a class="customlink" title="Excluir evento" href="<?php echo site_url('Eventos/excluir/'.$row->id)?>"><i class="material-icons">Excluir</i></a>      
+                      </div> 
+                    </td>
+                  </tr><?php } ?>
+                </tbody>
+              </table>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div id="pesquisas" class="tab-pane fade">
+     <!--Tabela de pesquisas-->
+      <div class="container-fluid">
+        <div class="row">
+          <div class="col" style="margin-top: 10px; margin-bottom: 10px;">
+            <table class="table table-striped" style="margin-top:0px">
+                <thead style="color: #ffffff; background-color: #790505; border-color: #790505;">
+                  <tr>
+                    <th scope="col">Título</th>
+                    <th>Tipo</th>
+                    <th>Opção</th>
+                    
+                  </tr>
+                </thead>
+                <tbody>
+                  <?php
+                      $query = $this->db->get('pesquisas');
+                      foreach ($query->result() as $row) {
+                      ?>
+                  <tr>
+                    <th scope="row"><?php echo $row->titulo;?></th>
+                    <td><?php echo $row->tipo;?></td>
+                    <td>
+                      <div class="col">
+                        <a class="customlink" title="Atualizar evento" href="<?php echo site_url('Pesquisas/pagina_edicao/'.$row->id)?>"><i class="material-icons">Editar</i></a> 
+                      </div>
+                      <div class="col">
+                        <a class="customlink" title="Excluir evento" href="<?php echo site_url('Pesquisas/excluir/'.$row->id)?>"><i class="material-icons">Excluir</i></a>      
+                      </div>
+                    </td>
+                  </tr><?php } ?>
+                </tbody>
+              </table>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div id="documentos" class="tab-pane fade">
+      <!--Tabela de documentos-->
+      <div class="container-fluid">
+        <div class="row">
+          <div class="col" style="margin-top: 10px; margin-bottom: 10px;">
+            <table class="table table-striped" style="margin-top: 0px">
+                <thead style="color: #ffffff; background-color: #790505; border-color: #790505;">
+                  <tr>
+                    <th scope="col">Título</th>
+                    <th>Categoria</th>
+                    <th>Opção</th>
+                    
+                  </tr>
+                </thead>
+                <tbody>
+                  <?php
+                      $query = $this->db->get('documentos');
+                      foreach ($query->result() as $row) {
+                      ?>
+                  <tr>
+                    <th scope="row"><?php echo $row->titulo;?></th>
+                    <td><?php echo $row->categoria;?></td>
+                    <td>
+                      <div class="col">
+                        <a class="customlink" title="Atualizar evento" href="<?php echo site_url('Documentos/pagina_edicao/'.$row->id)?>"><i class="material-icons">Editar</i></a>
+                      </div>
+                      <div class="col">
+                         <a class="customlink" title="Excluir evento" href="<?php echo site_url('Documentos/excluir/'.$row->id)?>"><i class="material-icons">Excluir</i></a> 
+                      </div> 
+                    </td>
+                  </tr><?php } ?>
+                </tbody>
+              </table>
+          </div>
+        </div>
+      </div>
+    </div>
+</div>
 
 
 <!--
@@ -25,48 +150,7 @@
     <p><strong><a href=<?php echo site_url('documento')?> class="blue-text">Cadastrar Documento</a></strong></p>
     <p><strong><a href=<?php echo site_url('logout')?> class="blue-text">Logout</a></strong></p>
 </div>
--->
 
-<!--Tabela de eventos-->
-<div class="container-fluid">
-  <div class="row">
-    <div class="col" style="margin-top: 10px; margin-bottom: 10px;">
-      <a href="#" class="btn btn-dark btn-sm navbar-right btn-block">Eventos</a>
-      <table class="table table-striped" style="margin-top: 0px">
-          <thead style="color: #ffffff; background-color: #790505; border-color: #790505;">
-            <tr>
-              <th scope="col">Título</th>
-              <th>Resumo</th>
-              <th>Data</th>
-              <th>Opção</th>
-            </tr>
-          </thead>
-          <tbody>
-            <?php
-                $query = $this->db->get('eventos');
-                foreach ($query->result() as $row) {
-                ?>
-            <tr>
-              <th scope="row"><?php echo $row->titulo;?></th>
-              <td><?php echo $row->resumo;?></td>
-              <td><?php echo $row->data;?> </td>
-              <td>
-                <div class="col">
-                  <a class="customlink" title="Atualizar evento" href="<?php echo site_url('Eventos/pagina_edicao/'.$row->id)?>"><i class="material-icons">Editar</i></a> 
-                </div>
-                <div class="col">
-                  <a class="customlink" title="Excluir evento" href="<?php echo site_url('Eventos/excluir/'.$row->id)?>"><i class="material-icons">Excluir</i></a>      
-                </div> 
-              </td>
-            </tr><?php } ?>
-          </tbody>
-        </table>
-    </div>
-  </div>
-</div>
-
-
-<!-- SEM FRONT (CÓPIA COMENTADA COM BACK FUNCIONANDO LEGAL)
 <div>
   <h5>Tabela de eventos</h5>
         <table>
@@ -97,47 +181,7 @@
         </table>
       </div>
 </div>
--->
 
-
-<!--Tabela de pesquisas-->
-<div class="container-fluid">
-  <div class="row">
-    <div class="col" style="margin-top: 10px; margin-bottom: 10px;">
-      <a href="#" class="btn btn-dark btn-sm navbar-right btn-block">Pesquisas</a>
-      <table class="table table-striped" style="margin-top:0px">
-          <thead style="color: #ffffff; background-color: #790505; border-color: #790505;">
-            <tr>
-              <th scope="col">Título</th>
-              <th>Tipo</th>
-              <th>Opção</th>
-              
-            </tr>
-          </thead>
-          <tbody>
-            <?php
-                $query = $this->db->get('pesquisas');
-                foreach ($query->result() as $row) {
-                ?>
-            <tr>
-              <th scope="row"><?php echo $row->titulo;?></th>
-              <td><?php echo $row->tipo;?></td>
-              <td>
-                <div class="col">
-                  <a class="customlink" title="Atualizar evento" href="<?php echo site_url('Pesquisas/pagina_edicao/'.$row->id)?>"><i class="material-icons">Editar</i></a> 
-                </div>
-                <div class="col">
-                  <a class="customlink" title="Excluir evento" href="<?php echo site_url('Pesquisas/excluir/'.$row->id)?>"><i class="material-icons">Excluir</i></a>      
-                </div>
-              </td>
-            </tr><?php } ?>
-          </tbody>
-        </table>
-    </div>
-  </div>
-</div>
-
-<!-- SEM FRONT, MAS BACK FUNCIONANDO CHUCHU BELEZA
 <div>
   <br><br><br><h5>Tabela de pesquisas</h5>
         <table>
@@ -166,53 +210,7 @@
         </table>
       </div>
 </div>
--->
 
-
-
-<!--Tabela de pesquisas-->
-<div class="container-fluid">
-  <div class="row">
-    <div class="col" style="margin-top: 10px; margin-bottom: 10px;">
-      <a href="#" class="btn btn-dark btn-sm navbar-right btn-block">Documentos</a>
-      <table class="table table-striped" style="margin-top: 0px">
-          <thead style="color: #ffffff; background-color: #790505; border-color: #790505;">
-            <tr>
-              <th scope="col">Título</th>
-              <th>Categoria</th>
-              <th>Opção</th>
-              
-            </tr>
-          </thead>
-          <tbody>
-            <?php
-                $query = $this->db->get('documentos');
-                foreach ($query->result() as $row) {
-                ?>
-            <tr>
-              <th scope="row"><?php echo $row->titulo;?></th>
-              <td><?php echo $row->categoria;?></td>
-              <td>
-                <div class="col">
-                  <a class="customlink" title="Atualizar evento" href="<?php echo site_url('Documentos/pagina_edicao/'.$row->id)?>"><i class="material-icons">Editar</i></a>
-                </div>
-                <div class="col">
-                   <a class="customlink" title="Excluir evento" href="<?php echo site_url('Documentos/excluir/'.$row->id)?>"><i class="material-icons">Excluir</i></a> 
-                </div> 
-              </td>
-            </tr><?php } ?>
-          </tbody>
-        </table>
-    </div>
-  </div>
-</div>
-
-
-
-
-
-
-<!-- SEM FRONT, MAS O BACK TA FUNCIONANDO TOPZERA
 <div>
   <br><br><br><h5>Tabela de documentos</h5>
         <table>
