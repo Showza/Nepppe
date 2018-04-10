@@ -210,36 +210,11 @@
         </table>
       </div>
 </div>
+<<<<<<< HEAD
 
 <div>
   <br><br><br><h5>Tabela de documentos</h5>
         <table>
           <thead>
-            <tr>
-              <th scope="col">Título</th>
-              <th>Categoria</th>
-              <th>Opção</th>
-              
-            </tr>
-          </thead>
-          <tbody>
-            <?php
-                $query = $this->db->get('documentos');
-                foreach ($query->result() as $row) {
-                ?>
-            <tr>
-              <th scope="row"><?php echo $row->titulo;?></th>
-              <td><?php echo $row->categoria;?></td>
-              <td>
-                <div class="col">
-                  <a class="customlink" title="Excluir evento" href="<?php echo site_url('Documentos/excluir/'.$row->id)?>"><i class="material-icons">delete</i></a>
-                </div>
-                          
-                <a class="customlink" title="Atualizar evento" href="<?php echo site_url('Documentos/pagina_edicao/'.$row->id)?>"><i class="material-icons">create</i></a>
-              </td>
-            </tr><?php } ?>
-          </tbody>
-        </table>
-      </div>
-</div>
+
 -->

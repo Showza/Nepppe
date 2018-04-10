@@ -12,7 +12,8 @@
             $titulo = $row->titulo;
             $resumo = $row->resumo;
             $conteudo = $row->conteudo;
-            $categoria = $row->categoria;         
+            $categoria = $row->categoria; 
+            $documento = $row->documento;        
             
           }
       ?>
