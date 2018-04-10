@@ -1,4 +1,9 @@
-<h2>Página de Edição de evento</h2>
+<div class="col-md-4"></div>
+<div class="container col-md-4">
+    <header class="text-center"><br><br>
+    	<img src="<?php echo base_url('/assets/frontend/img/logomarca.png');?>" class="img-fluid" width="200px" style="margin-bottom: 20px;">
+        <h4>Edição de evento</h4>
+    </header>
 <div class="container">
     <?php
       $this->db->where('id', $id);
@@ -38,7 +43,7 @@
 			<input type="time" id="txt-hora" name="txt-hora" class="form-control" value="<?php echo set_value('txt-hora', $hora);?>">
 		</div>
 
-		<button type="submit" class="btn btn-lg btn-success btn-block">Atualizar</button>
+		<button type="submit" class="btn btn-lg btn-success btn-block" style="color: #ffffff; background-color: #790505; border-color: #790505; margin-top: 30px;">Atualizar</button>
 		<?php echo form_close(); ?>
         </div>
 </div>

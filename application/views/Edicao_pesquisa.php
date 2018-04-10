@@ -1,4 +1,10 @@
-<h2>Página de Edição de pesquisa</h2>
+<div class="col-md-4"></div>
+<div class="container col-md-4">
+    <header class="text-center"><br><br>
+    	<img src="<?php echo base_url('/assets/frontend/img/logomarca.png');?>" class="img-fluid" width="200px" style="margin-bottom: 20px;">
+        <h4>Edição de pesquisa</h4>
+    </header>
+
 <div class="container">
     <?php
       $this->db->where('id', $id);
@@ -7,8 +13,7 @@
             $titulo = $row->titulo;
             $resumo = $row->resumo;
             $conteudo = $row->conteudo;
-            $tipo = $row->tipo;         
-            
+            $tipo = $row->tipo;          
           }
       ?>
     
@@ -37,7 +42,7 @@
 		  </select>
 		</div>
 
-		<button type="submit" class="btn btn-lg btn-success btn-block">Atualizar</button>
+		<button type="submit" class="btn btn-lg btn-success btn-block" style="color: #ffffff; background-color: #790505; border-color: #790505; margin-top: 30px;">Atualizar</button>
 		<?php echo form_close(); ?>
         </div>
 </div>

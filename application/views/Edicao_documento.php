@@ -1,4 +1,9 @@
-<h2>Página de Edição de documento</h2>
+<div class="col-md-4"></div>
+<div class="container col-md-4">
+    <header class="text-center"><br><br>
+      <img src="<?php echo base_url('/assets/frontend/img/logomarca.png');?>" class="img-fluid" width="200px">
+        <h4>Página de Edição de documento</h4>
+    </header>
 <div class="container">
     <?php
       $this->db->where('id', $id);
@@ -47,7 +52,7 @@
 		</div-->
         
 
-		<br><button type="submit" class="btn btn-lg btn-success btn-block">Atualizar</button>
+		<br><button type="submit" class="btn btn-lg btn-success btn-block" style="color: #ffffff; background-color: #790505; border-color: #790505; margin-bottom:30px">Atualizar</button>
 		<?php echo form_close(); ?>
         </div>
 </div>

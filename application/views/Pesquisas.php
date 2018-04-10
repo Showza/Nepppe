@@ -1,3 +1,47 @@
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+  
+
+<div class="container">
+  <h2>Pesquisas</h2>
+  <ul class="nav nav-tabs">
+    <li><a data-toggle="tab" href="#andamento" style="color: #ffffff; background-color: #790505; border-color: #790505;">Em andamento</a></li>
+    <li><a data-toggle="tab" href="#concluidas" style="color: #ffffff; background-color: #790505; border-color: #790505;">Concluídas</a></li>
+
+  </ul>
+
+  <div class="tab-content">
+    <div id="andamento" class="tab-pane fade">
+      <!-- fazer para cada uma das pesquisas em andamento-->
+
+      <div class="dropdown">
+        <button id="dLabel" type="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+          Dropdown trigger
+          <span class="caret"></span>
+        </button>
+      <ul class="dropdown-menu" aria-labelledby="dLabel">
+      <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+      tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+      quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+      consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
+      cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
+      proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+      </ul>
+</div>
+      
+    </div>
+    <div id="concluidas" class="tab-pane fade">
+      <p>Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+    </div>
+  </div>
+</div>
+
+
+
+</script>
+
+
+
+<!--Ana fez
 <div class="container"> 
     <div class="row">
             <div class="col s12 m8 l9"">
@@ -15,3 +59,4 @@
     </div>
   </div>
 </div>
+-->

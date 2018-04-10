@@ -174,7 +174,7 @@
 <div class="container-fluid">
   <div class="row">
     <div class="col" style="margin-top: 10px; margin-bottom: 10px;">
-      <a href="#" class="btn btn-dark btn-sm navbar-right btn-block">Base de dados</a>
+      <a href="#" class="btn btn-dark btn-sm navbar-right btn-block">Documentos</a>
       <table class="table table-striped" style="margin-top: 0px">
           <thead style="color: #ffffff; background-color: #790505; border-color: #790505;">
             <tr>

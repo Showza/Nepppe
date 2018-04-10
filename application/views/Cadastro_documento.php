@@ -1,6 +1,7 @@
 <div class="col-md-4"></div>
 <div class="container col-md-4">
     <header class="text-center"><br><br>
+    	<img src="<?php echo base_url('/assets/frontend/img/logomarca.png');?>" class="img-fluid" width="200px" style="margin-bottom: 20px;">
         <h4>Cadastro de documento</h4>
     </header>
 			<div class="templatemo-login-form">
@@ -42,7 +43,7 @@
 					<input type="file" id="arquivo" name="arquivo" class="form-control" value="<?php echo set_value('file') ?>" />
 				</div>
 
-				<br><br><input type="submit" class="btn btn-lg btn-success btn-block" value="Cadastrar" />
+				<br><br><input type="submit" class="btn btn-lg btn-success btn-block" style="color: #ffffff; background-color: #790505; border-color: #790505;margin-bottom: 30px" value="Cadastrar" />
 			</form>
 			</div>
 	</div>

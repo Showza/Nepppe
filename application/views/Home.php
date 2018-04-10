@@ -76,7 +76,7 @@
             </div>
             <div class="card-footer">
               <div align="center">
-                  <a href="#" class="btn btn-primary center-block" style="color: #ffffff; background-color: #790505; border-color: #790505">Basômetro</a>
+                  <a href="http://estadaodados.com/basometro/" class="btn btn-primary center-block" style="color: #ffffff; background-color: #790505; border-color: #790505">Basômetro</a>
                 </div>
             </div>
           </div>
