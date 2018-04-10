@@ -7,11 +7,12 @@ class Documentos_model extends CI_Model{
 		parent::__construct();
 	}
 
-	public function adicionar($titulo, $resumo, $conteudo, $categoria){
+	public function adicionar($titulo, $resumo, $conteudo, $categoria, $documento){
 		$dados['titulo']= $titulo;
 		$dados['resumo']= $resumo;
 		$dados['conteudo']= $conteudo;
 		$dados['categoria']= $categoria;
+		$dados['documento']= $documento;
 
 		return $this->db->insert('documentos', $dados);
 	}
@@ -21,11 +22,13 @@ class Documentos_model extends CI_Model{
 		return $this->db->delete('documentos');
 	}
 
-	public function atualizar($titulo, $resumo, $conteudo, $categoria, $id){
+	public function atualizar($titulo, $resumo, $conteudo, $categoria, $id, $documento){
 		$dados['titulo']= $titulo;
 		$dados['resumo']= $resumo;
 		$dados['conteudo']= $conteudo;
 		$dados['categoria']= $categoria;
+		$dados['documento']= $documento;
+
 		$this->db->where('id', $id);
 		return $this->db->update('documentos', $dados);
 	}
