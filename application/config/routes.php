@@ -64,6 +64,8 @@ $route['pessoas'] = 'Inicial/equipe';
 $route['contato'] = 'Inicial/contato';
 $route['sobre'] = 'Inicial/sobre';
 
+$route['pesquisas'] = 'Inicial/pesquisas';
+$route['repositorio'] = 'Inicial/repositorio';
 
 
 $route['404_override'] = '';

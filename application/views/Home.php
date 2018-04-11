@@ -61,7 +61,7 @@
             </div>
             <div class="card-footer">
               <div align="center">
-                  <a href="#" class="btn btn-primary center-block" style="color: #ffffff; background-color: #790505; border-color: #790505";>Ir para pesquisas</a>
+                  <a href="<?php echo site_url('pesquisas')?>" class="btn btn-primary center-block" style="color: #ffffff; background-color: #790505; border-color: #790505";>Ir para pesquisas</a>
                 </div>
             </div>
           </div>
@@ -69,7 +69,6 @@
         <!-- /.col-md-4 -->
         <div class="col-md-4 mb-4">
           <div class="card h-100">
-            <img src="" class="card-img-top img-fluid">
             <div class="card-body">
               <h5 class="card-title">Base de dados</h5>
               <p class="card-text" align="justify">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quod tenetur ex natus at dolorem enim! Nesciunt pariatur voluptatem sunt quam eaque, vel, non in id dolore voluptates quos eligendi labore.</p>
@@ -90,7 +89,7 @@
             </div>
             <div class="card-footer">
               <div align="center">
-                  <a href="#" class="btn btn-primary" style="color: #ffffff; background-color: #790505; border-color: #790505;">Ir para repositório</a>
+                  <a href="<?php echo site_url('repositorio')?>" class="btn btn-primary" style="color: #ffffff; background-color: #790505; border-color: #790505;">Ir para repositório</a>
                 </div>
             </div>
           </div>
