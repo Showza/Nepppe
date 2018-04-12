@@ -2,9 +2,9 @@
   
 
 <div class="container">
-  <h2>Pesquisas</h2>
+  <h2>Repositório</h2>
   <ul class="nav nav-tabs">
-    <li><a data-toggle="tab" href="#pesquisas" style="color: #ffffff; background-color: #790505; border-color: #790505;">Pesquisas</a></li>
+    <li class="active"><a data-toggle="tab" href="#pesquisas" style="color: #ffffff; background-color: #790505; border-color: #790505;">Pesquisas</a></li>
     <li><a data-toggle="tab" href="#artigos" style="color: #ffffff; background-color: #790505; border-color: #790505;">Artigos</a></li>
     <li><a data-toggle="tab" href="#livros" style="color: #ffffff; background-color: #790505; border-color: #790505;">Livros</a></li>
     <li><a data-toggle="tab" href="#teses" style="color: #ffffff; background-color: #790505; border-color: #790505;">Teses e dissertações</a></li>
@@ -20,7 +20,7 @@
       foreach ($query->result() as $row){
       ?><br>
       <div class="dropdown">
-        <button id="dLabel" type="button" class="btn btn-lg btn-block" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+        <button id="dLabel" type="button" class="btn btn-lg btn-block" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" style="color: #ffffff; background-color: #790505; border-color: #790505;">
           <?php echo $row->titulo; ?>
           <span class="caret"></span>
         </button>
@@ -44,7 +44,7 @@
       foreach ($query->result() as $row){
       ?><br>
       <div class="dropdown">
-        <button id="dLabel" type="button" class="btn btn-lg btn-block" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+        <button id="dLabel" type="button" class="btn btn-lg btn-block" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" style="color: #ffffff; background-color: #790505; border-color: #790505;">
           <?php echo $row->titulo; ?>
           <span class="caret"></span>
         </button>
@@ -68,7 +68,7 @@
       foreach ($query->result() as $row){
       ?><br>
       <div class="dropdown">
-        <button id="dLabel" type="button" class="btn btn-lg btn-block" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+        <button id="dLabel" type="button" class="btn btn-lg btn-block" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" style="color: #ffffff; background-color: #790505; border-color: #790505;">
           <?php echo $row->titulo; ?>
           <span class="caret"></span>
         </button>
@@ -92,7 +92,7 @@
       foreach ($query->result() as $row){
       ?><br>
       <div class="dropdown">
-        <button id="dLabel" type="button" class="btn btn-lg btn-block" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+        <button id="dLabel" type="button" class="btn btn-lg btn-block" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" style="color: #ffffff; background-color: #790505; border-color: #790505;">
           <?php echo $row->titulo; ?>
           <span class="caret"></span>
         </button>

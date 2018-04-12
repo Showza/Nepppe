@@ -54,7 +54,7 @@
  <div class="container">
   <div class="row">
         <div class="col-md-4 mb-4">
-          <div class="card h-100">
+          <div class="card h-15">
             <div class="card-body">
               <h5 class="card-title">Nossas pesquisas</h5>
               <p class="card-text" align="justify">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Rem magni quas ex numquam, maxime minus quam molestias corporis quod, ea minima accusamus.</p>
@@ -68,7 +68,7 @@
         </div>
         <!-- /.col-md-4 -->
         <div class="col-md-4 mb-4">
-          <div class="card h-100">
+          <div class="card h-15">
             <div class="card-body">
               <h5 class="card-title">Base de dados</h5>
               <p class="card-text" align="justify">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quod tenetur ex natus at dolorem enim! Nesciunt pariatur voluptatem sunt quam eaque, vel, non in id dolore voluptates quos eligendi labore.</p>
@@ -82,7 +82,7 @@
         </div>
         <!-- /.col-md-4 -->
         <div class="col-md-4 mb-4">
-          <div class="card h-100">
+          <div class="card h-15">
             <div class="card-body">
               <h5 class="card-title">Repositório</h5>
               <p class="card-text" align="justify">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Rem magni quas ex numquam, maxime minus quam molestias corporis quod, ea minima accusamus.</p>

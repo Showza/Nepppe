@@ -4,7 +4,7 @@
 <div class="container">
   <h2>Pesquisas</h2>
   <ul class="nav nav-tabs">
-    <li><a data-toggle="tab" href="#andamento" style="color: #ffffff; background-color: #790505; border-color: #790505;">Em andamento</a></li>
+    <li class="active"><a data-toggle="tab" href="#andamento" style="color: #ffffff; background-color: #790505; border-color: #790505;">Em andamento</a></li>
     <li><a data-toggle="tab" href="#concluidas" style="color: #ffffff; background-color: #790505; border-color: #790505;">Concluídas</a></li>
   </ul><br>
 
@@ -18,7 +18,7 @@
       foreach ($query->result() as $row){
       ?>
       <div class="dropdown">
-        <button id="dLabel" type="button" class="btn btn-lg btn-block" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+        <button id="dLabel" type="button" class="btn btn-lg btn-block" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" style="color: #ffffff; background-color: #790505; border-color: #790505;">
           <?php echo $row->titulo; ?>
           <span class="caret"></span>
         </button>
@@ -42,7 +42,7 @@
       foreach ($query->result() as $row){
       ?>
       <div class="dropdown">
-        <button id="dLabel" type="button" class="btn btn-lg btn-block" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+        <button id="dLabel" type="button" class="btn btn-lg btn-block" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" style="color: #ffffff; background-color: #790505; border-color: #790505;">
           <?php echo $row->titulo; ?>
           <span class="caret"></span>
         </button>
