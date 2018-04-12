@@ -112,6 +112,7 @@
                     <th scope="col">Título</th>
                     <th>Categoria</th>
                     <th>Opção</th>
+                    <th>Arquivo</th>
                     
                   </tr>
                 </thead>
@@ -137,6 +138,9 @@
                       <div class="col">
                          <a class="customlink" title="Excluir evento" href="<?php echo site_url('Documentos/excluir/'.$row->id)?>"><i class="material-icons">Excluir</i></a> 
                       </div> 
+                    </td>
+                    <td>
+                      <a class="customlink" title="Arquivo" href="<?php echo base_url('/documentos/'.$row->documento)?>"> <?php echo $row->documento; ?></a>
                     </td>
                   </tr><?php } ?>
                 </tbody>
