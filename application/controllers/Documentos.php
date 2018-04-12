@@ -36,7 +36,7 @@ class Documentos extends CI_Controller {
 		$this->form_validation->set_rules('txt-resumo', 'Resumo do documento', 'required'); 
 		$this->form_validation->set_rules('txt-conteudo', 'Conteúdo do documento', 'required');
 		$this->form_validation->set_rules('txt-documento', 'Nome do documento', 'required'); 
-
+		
 
 		$titulo= $this->input->post('txt-titulo');
 		$resumo= $this->input->post('txt-resumo');
@@ -83,8 +83,7 @@ class Documentos extends CI_Controller {
             $titulo= $this->input->post('txt-titulo');
 			$resumo= $this->input->post('txt-resumo');
 			$conteudo= $this->input->post('txt-conteudo');
-            $categoria= filter_input(INPUT_POST,"categoria",FILTER_SANITIZE_STRING);
-            $documento= $this->input->post('txt-documento');			           
+            $categoria= filter_input(INPUT_POST,"categoria",FILTER_SANITIZE_STRING);			           
 					
 			if ($this->modeldocumentos->atualizar($titulo, $resumo, $conteudo, $categoria, $id)){
 				redirect(site_url('Usuarios/auxiliar'));

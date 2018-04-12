@@ -22,12 +22,11 @@ class Documentos_model extends CI_Model{
 		return $this->db->delete('documentos');
 	}
 
-	public function atualizar($titulo, $resumo, $conteudo, $categoria, $id, $documento){
+	public function atualizar($titulo, $resumo, $conteudo, $categoria, $id){
 		$dados['titulo']= $titulo;
 		$dados['resumo']= $resumo;
 		$dados['conteudo']= $conteudo;
 		$dados['categoria']= $categoria;
-		$dados['documento']= $documento;
 
 		$this->db->where('id', $id);
 		return $this->db->update('documentos', $dados);

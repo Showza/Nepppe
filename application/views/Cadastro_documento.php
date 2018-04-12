@@ -40,7 +40,7 @@
 				</div>
 
 			  	<br><div class="form-group">
-					<input type="file" id="arquivo" name="arquivo" class="form-control" value="<?php echo set_value('file') ?>" />
+					<input type="file" id="arquivo" name="arquivo" class="form-control" />
 				</div>
 
 				<br><br><input type="submit" class="btn btn-lg btn-success btn-block" style="color: #ffffff; background-color: #790505; border-color: #790505;margin-bottom: 30px" value="Cadastrar" />

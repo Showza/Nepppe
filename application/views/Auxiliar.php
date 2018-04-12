@@ -18,7 +18,7 @@
 
 
 <div class="container">
-  <h2>Pesquisas</h2>
+  <h2>Página do Auxiliar</h2>
   <ul class="nav nav-tabs">
     <li class="active"><a data-toggle="tab" href="#eventos" style="color: #ffffff; background-color: #790505; border-color: #790505;">Eventos</a></li>
     <li><a data-toggle="tab" href="#pesquisas" style="color: #ffffff; background-color: #790505; border-color: #790505;">Pesquisas</a></li>
@@ -122,7 +122,14 @@
                       ?>
                   <tr>
                     <th scope="row"><?php echo $row->titulo;?></th>
-                    <td><?php echo $row->categoria;?></td>
+                    <td><?php 
+                      $this->db->where('id', $row->categoria);
+                      $query2 = $this->db->get('categorias');
+                        foreach ($query2->result() as $linha) {
+                          echo $linha->nome;
+                        }
+                      ?>
+                    </td>
                     <td>
                       <div class="col">
                         <a class="customlink" title="Atualizar evento" href="<?php echo site_url('Documentos/pagina_edicao/'.$row->id)?>"><i class="material-icons">Editar</i></a>
