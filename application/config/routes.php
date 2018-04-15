@@ -55,6 +55,8 @@ $route['administrador'] = 'Usuarios/administrador';
 $route['evento'] = 'Eventos/cadastro_evento';
 $route['pesquisa'] = 'Pesquisas/cadastro_pesquisa';
 $route['documento'] = 'Documentos/cadastro_documento';
+$route['midia'] = 'Midias/cadastro_midia';
+
 
 $route['logout'] = 'Usuarios/logout';
 $route['login'] = 'Usuarios';

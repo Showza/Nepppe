@@ -7,7 +7,7 @@
 <div class="container">
     <?php
       $this->db->where('id', $id);
-      $query = $this->db->get('eventos');
+      $query = $this->db->get('midias');
           foreach ($query->result() as $row) {
             $titulo = $row->titulo;
             $link = $row->link;
@@ -17,7 +17,7 @@
     <div class="templatemo-login-form">
 	<?php
 		echo validation_errors('<div class="alert alert-danger">', '</div>');
-		echo form_open('Eventos/atualizar_dados/'.$id);
+		echo form_open('Midias/atualizar_dados/'.$id);
 	?>
 		<div class="form-group">
 		    <input type="text" id="txt-titulo" name="txt-titulo" class="form-control" value="<?php echo set_value('txt-titulo', $titulo);?>" autofocus>
