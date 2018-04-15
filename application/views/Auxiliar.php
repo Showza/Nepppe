@@ -7,7 +7,7 @@
     <div class="col" style="color:#ffffff; background-color:#790505; border-color:#790505;">
       NEPPPE - Página do Auxiliar
     </div>
-    <div class="col text-right" style="color:#ffffff; background-color:#790505; border-color:#790505;">
+    <div class="col" style="color:#ffffff; background-color:#790505; border-color:#790505;">
       <a href="<?php echo site_url('evento')?>" class="btn btn-dark btn-sm navbar-right">Cadastrar Evento</a>
       <a href="<?php echo site_url('midia')?>" class="btn btn-dark btn-sm navbar-right">Cadastrar Mídia</a>
       <a href="<?php echo site_url('pesquisa')?>" class="btn btn-dark btn-sm navbar-right">Cadastrar Pesquisa</a>
@@ -140,7 +140,7 @@
                       </div> 
                     </td>
                     <td>
-                      <a class="customlink" title="Arquivo" href="<?php echo base_url('/documentos/'.$row->documento)?>"> <?php echo $row->documento; ?></a>
+                      <a class="customlink" title="Arquivo" target="_blank" href="<?php echo base_url('/documentos/'.$row->documento)?>"> <?php echo $row->documento; ?></a>
                     </td>
                   </tr><?php } ?>
                 </tbody>

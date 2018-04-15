@@ -32,24 +32,25 @@ class Documentos extends CI_Controller {
 
 	public function cadastrar(){
 		$this->load->library('form_validation');
-		$this->form_validation->set_rules('txt-titulo', 'Título do documento', 'required|is_unique[documentos.titulo]');
-		$this->form_validation->set_rules('txt-resumo', 'Resumo do documento', 'required'); 
-		$this->form_validation->set_rules('txt-conteudo', 'Conteúdo do documento', 'required');
-		$this->form_validation->set_rules('txt-documento', 'Nome do documento', 'required'); 
-		
+		$this->form_validation->set_rules('txt-titulo', 'Título do documento', 'required');		
 
 		$titulo= $this->input->post('txt-titulo');
 		$resumo= $this->input->post('txt-resumo');
 		$conteudo= $this->input->post('txt-conteudo');
 		$categoria= filter_input(INPUT_POST,"categoria",FILTER_SANITIZE_STRING);
-		$arquivo= $_FILE['arquivo'];
-		$documento= $this->input->post('txt-documento');
+		$arquivo= $_FILES['arquivo'];
+		
+		$original_name = $_FILES['arquivo']['name'];
+        $new_name = ''.strtr(utf8_decode($original_name), utf8_decode(' àáâãäçèéêëìíîïñòóôõöùúûüýÿÀÁÂÃÄÇÈÉÊËÌÍÎÏÑÒÓÔÕÖÙÚÛÜÝ'), '_aaaaaceeeeiiiinooooouuuuyyAAAAACEEEEIIIINOOOOOUUUUY');
+        $path = 'assets/frontend/documentos/eventos/'.'/'.$new_name;
 
 		$configuracao = array(
          'upload_path'   => './documentos/',
          'allowed_types' => 'pdf|zip|rar|doc|docx|odc|txt|csv',
          'file_name'     => $documento,
-         'max_size'      => '5000'
+         //'max_size'      => 100;
+         //'max_width'     => 1024;
+         //'max_height'    => 768;
         );   
 		
         $this->load->library('upload');
@@ -60,7 +61,7 @@ class Documentos extends CI_Controller {
 		}else{
 			
 			if ($this->upload->do_upload('arquivo')){
-				if ($this->modeldocumentos->adicionar($titulo, $resumo, $conteudo, $categoria, $documento)) 
+				if ($this->modeldocumentos->adicionar($titulo, $resumo, $conteudo, $categoria, $new_name)) 
          			echo 'Arquivo salvo com sucesso.';
     			else
          			echo $this->upload->display_errors();

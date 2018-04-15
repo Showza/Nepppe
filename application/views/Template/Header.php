@@ -22,7 +22,7 @@
               <a class="nav-link js-scroll-trigger" href="<?php echo site_url('contato')?>" style="color: #ffffff;">Contato</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link js-scroll-trigger" href="<?php echo site_url('midia')?>" style="color: #ffffff;">Mídia</a>
+              <a class="nav-link js-scroll-trigger" href="<?php echo site_url('Midias')?>" style="color: #ffffff;">Mídia</a>
             </li>
           </ul>
         </div>

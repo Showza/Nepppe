@@ -8,6 +8,12 @@ class Midias extends CI_Controller {
 		$this->load->model('midias_model', 'modelmidias');
 		 $this->load->helper(array('form', 'url'));
 	}
+
+	public function index()	{
+		$this->load->view('Template/Html-header');
+		$this->load->view('Midia');
+		$this->load->view('Template/Html-footer');
+	}
 	
 	public function excluir($id){
 		if ($this->modelmidias->excluir($id)) {
