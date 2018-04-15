@@ -2,7 +2,7 @@
 <div class="container col-md-4">
     <header class="text-center"><br><br>
     	<img src="<?php echo base_url('/assets/frontend/img/logomarca.png');?>" class="img-fluid" width="200px" style="margin-bottom: 20px;">
-        <h4>Cadastro de evento</h4>
+        <h4>Cadastro de mídia</h4>
     </header>
 			<div class="templatemo-login-form">
 				<?php

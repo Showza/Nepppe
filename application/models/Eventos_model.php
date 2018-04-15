@@ -7,12 +7,9 @@ class Eventos_model extends CI_Model{
 		parent::__construct();
 	}
 
-	public function adicionar($titulo, $resumo, $local, $data, $hora){
+	public function adicionar($titulo, $link){
 		$dados['titulo']= $titulo;
-		$dados['resumo']= $resumo;
-		$dados['local']= $local;
-		$dados['data']= $data;
-		$dados['hora']= $hora;
+		$dados['link']= $link;
 		return $this->db->insert('eventos', $dados);
 	}
 
@@ -21,12 +18,9 @@ class Eventos_model extends CI_Model{
 		return $this->db->delete('eventos');
 	}
 
-	public function atualizar($titulo, $resumo, $local, $data, $hora, $id){
+	public function atualizar($titulo, $link, $id){
 		$dados['titulo']= $titulo;
-		$dados['resumo']= $resumo;
-		$dados['local']= $local;
-		$dados['data']= $data;
-		$dados['hora']= $hora;
+		$dados['link']= $link;
 		$this->db->where('id', $id);
 		return $this->db->update('eventos', $dados);
 	}

@@ -32,22 +32,16 @@ class Eventos extends CI_Controller {
 
 	public function inserir(){
 		$this->load->library('form_validation');
-		$this->form_validation->set_rules('txt-titulo', 'Título do evento', 'required'); #nome
-		$this->form_validation->set_rules('txt-resumo', 'Resumo do evento', 'required'); #nome
-		$this->form_validation->set_rules('txt-local', 'Local do evento', 'required'); #email
-		$this->form_validation->set_rules('txt-data', 'Data do evento', 'required'); #senha
-		$this->form_validation->set_rules('txt-hora', 'Hora do evento', 'required'); #senha
+		$this->form_validation->set_rules('txt-titulo', 'Título do evento', 'required');
+		$this->form_validation->set_rules('txt-link', 'Link do evento', 'required');
 
 		if($this->form_validation->run() == FALSE){
 			$this->cadastro_evento();
 		}else{
 			$titulo= $this->input->post('txt-titulo');
-			$resumo= $this->input->post('txt-resumo');
-			$local= $this->input->post('txt-local');
-			$data= $this->input->post('txt-data');
-			$hora= $this->input->post('txt-hora');
+			$link= $this->input->post('txt-link');
 			
-			 if ($this->modeleventos->adicionar($titulo, $resumo, $local, $data, $hora)) {
+			 if ($this->modeleventos->adicionar($titulo, $link)) {
 			 	redirect(site_url('Usuarios/auxiliar'));
 			 }else{
 			 	echo "Houve um erro no sistema";
@@ -57,23 +51,16 @@ class Eventos extends CI_Controller {
 
 	public function atualizar_dados($id){
 		$this->load->library('form_validation');
-        $this->form_validation->set_rules('txt-titulo', 'Título do evento', 'required');
-		$this->form_validation->set_rules('txt-resumo', 'Resumo do evento', 'required');
-		$this->form_validation->set_rules('txt-local', 'Local do evento', 'required');
-		$this->form_validation->set_rules('txt-data', 'Data do evento', 'required');
-		$this->form_validation->set_rules('txt-hora', 'Hora do evento', 'required');
-        
+		$this->form_validation->set_rules('txt-titulo', 'Título do evento', 'required');
+		$this->form_validation->set_rules('txt-link', 'Link do evento', 'required');        
 
 		if($this->form_validation->run() == FALSE){
 			$this->pagina_edicao($id);
 		}else{
             $titulo= $this->input->post('txt-titulo');
-			$resumo= $this->input->post('txt-resumo');			
-			$local= $this->input->post('txt-local');			
-            $data= $this->input->post('txt-data');	
-			$hora= $this->input->post('txt-hora');			           
+			$link= $this->input->post('txt-link');			           
 					
-			if ($this->modeleventos->atualizar($titulo, $resumo, $local, $data, $hora, $id)){
+			if ($this->modeleventos->atualizar($titulo, $link, $id)){
 				redirect(site_url('Usuarios/auxiliar'));
 			}else{
 				echo "Houve um erro no sistema";

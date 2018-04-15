@@ -35,8 +35,7 @@
                 <thead style="color: #ffffff; background-color: #790505; border-color: #790505;">
                   <tr>
                     <th scope="col">Título</th>
-                    <th>Resumo</th>
-                    <th>Data</th>
+                    <th>Link</th>
                     <th>Opção</th>
                   </tr>
                 </thead>
@@ -47,8 +46,7 @@
                       ?>
                   <tr>
                     <th scope="row"><?php echo $row->titulo;?></th>
-                    <td><?php echo $row->resumo;?></td>
-                    <td><?php echo $row->data;?> </td>
+                    <td><?php echo $row->link;?></td>
                     <td>
                       <div class="col">
                         <a class="customlink" title="Atualizar evento" href="<?php echo site_url('Eventos/pagina_edicao/'.$row->id)?>"><i class="material-icons">Editar</i></a> 
