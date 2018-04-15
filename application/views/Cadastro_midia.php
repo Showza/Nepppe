@@ -7,7 +7,7 @@
 			<div class="templatemo-login-form">
 				<?php
 					echo validation_errors('<div class="alert alert-danger">', '</div>');
-					echo form_open('Eventos/inserir');
+					echo form_open('Midias/inserir');
 				?>
 
 				<div class="form-group">

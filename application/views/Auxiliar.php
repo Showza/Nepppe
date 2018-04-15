@@ -9,6 +9,7 @@
     </div>
     <div class="col text-right" style="color:#ffffff; background-color:#790505; border-color:#790505;">
       <a href="<?php echo site_url('evento')?>" class="btn btn-dark btn-sm navbar-right">Cadastrar Evento</a>
+      <a href="<?php echo site_url('midia')?>" class="btn btn-dark btn-sm navbar-right">Cadastrar Mídia</a>
       <a href="<?php echo site_url('pesquisa')?>" class="btn btn-dark btn-sm navbar-right">Cadastrar Pesquisa</a>
       <a href="<?php echo site_url('documento')?>" class="btn btn-dark btn-sm navbar-right">Cadastrar Documento</a>
       <a href="<?php echo site_url('logout')?>" class="btn btn-dark btn-sm navbar-right">Logout</a>
@@ -23,6 +24,7 @@
     <li class="active"><a data-toggle="tab" href="#eventos" style="color: #ffffff; background-color: #790505; border-color: #790505;">Eventos</a></li>
     <li><a data-toggle="tab" href="#pesquisas" style="color: #ffffff; background-color: #790505; border-color: #790505;">Pesquisas</a></li>
     <li><a data-toggle="tab" href="#documentos" style="color: #ffffff; background-color: #790505; border-color: #790505;">Documentos</a></li>
+    <li><a data-toggle="tab" href="#midia" style="color: #ffffff; background-color: #790505; border-color: #790505;">Mídia</a></li>
   </ul>
 
   <div class="tab-content">
@@ -46,7 +48,7 @@
                       ?>
                   <tr>
                     <th scope="row"><?php echo $row->titulo;?></th>
-                    <td><?php echo $row->link;?></td>
+                    <td><a class="customlink" href="<?php echo $row->link ?>" target="_blank">Link</a></td>
                     <td>
                       <div class="col">
                         <a class="customlink" title="Atualizar evento" href="<?php echo site_url('Eventos/pagina_edicao/'.$row->id)?>"><i class="material-icons">Editar</i></a> 
@@ -139,6 +141,41 @@
                     </td>
                     <td>
                       <a class="customlink" title="Arquivo" href="<?php echo base_url('/documentos/'.$row->documento)?>"> <?php echo $row->documento; ?></a>
+                    </td>
+                  </tr><?php } ?>
+                </tbody>
+              </table>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div id="midia" class="tab-pane fade">
+      <div class="container-fluid">
+        <div class="row">
+          <div class="col" style="margin-top: 10px; margin-bottom: 10px;">
+            <table class="table table-striped" style="margin-top: 0px">
+                <thead style="color: #ffffff; background-color: #790505; border-color: #790505;">
+                  <tr>
+                    <th scope="col">Título</th>
+                    <th>Link</th>
+                    <th>Opção</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <?php
+                      $query = $this->db->get('midias');
+                      foreach ($query->result() as $row) {
+                      ?>
+                  <tr>
+                    <th scope="row"><?php echo $row->titulo;?></th>
+                    <td><a class="customlink" href="<?php echo $row->link ?>" target="_blank">Link</a></td>
+                    <td>
+                      <div class="col">
+                        <a class="customlink" title="Atualizar evento" href="<?php echo site_url('Midias/pagina_edicao/'.$row->id)?>">Editar</a> 
+                      </div>
+                      <div class="col">
+                        <a class="customlink" title="Excluir evento" href="<?php echo site_url('Midias/excluir/'.$row->id)?>"><i class="material-icons">Excluir</i></a>      
+                      </div> 
                     </td>
                   </tr><?php } ?>
                 </tbody>
