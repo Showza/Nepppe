@@ -1,52 +1,21 @@
-  <!--
-  <div class="container">
-    <div class="row">
-      <div class="col-2">
-        <img src="img/logomarca.png" class="img-fluid">
-      </div>
-      <div class="col-10">
-        <nav class="navbar navbar-dark navbar-expand-lg">
-          <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#nav1"
-          aria-controls="nav1" aria-expanded="false" aria-label="Navegação">
-            <span class="navbar-toggler-icon"></span>
-          </button>
-          <div class="collapse navbar-collapse" id="nav1">
-            <ul class="navbar-nav">
-              <li class="navbar-btn">
-                <a herf="#" class="nav-link" type="button" style="background-color: #790505">Início</a>
-              </li>
-              <li class="navbar-btn" type="button" style="background-color: #790505">
-                <a herf="#" class="nav-link">Sobre</a>
-              </li>
-              <li class="navbar-btn" type="button" style="background-color: #790505">
-                <a herf="#" class="nav-link">Pessoas</a>
-              </li>
-              <li class="navbar-btn" type="button" style="background-color: #790505">
-                <a herf="#" class="nav-link">Contato</a>
-              </li>
-              
-            </ul>
-          </div>
-
-
-        </nav>
-      </div>
-    </div>
-  </div>
--->
 <div class="container">
   <div class="row my-4">
         <!--<div class="col-lg-4">
           <img class="img-fluid" src="img/logomarca.png">
         </div>-->
-        <div class="col-lg-12" align="justify">
-          <h1>Núcleo de Estudos e Pesquisas em Políticas Públicas de Educação</h1>
-          <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
-          tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
-          quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
-          consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
-          cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
-          proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+        <div class="col-lg-12" align="justify"> <!--style="background-color: #F5F5F5;-->
+          <h4><center>NEPPPE</center></h4>
+          <h4><center>Núcleo de Estudos e Pesquisas em Políticas Públicas de Educação</center></h4>
+          <p>
+            O Núcleo de Estudos e Pesquisas em Políticas Públicas de Educação (NEPPPE) foi criado em 2017, quando, também, foi certificado pelo Diretório de Pesquisas do CNPq. Vincula-se à Linha de Pesquisa “Formação de Professores, Instituições e História da Educação – (FPIHE)”, do Programa de Pós-Graduação em Educação da Universidade Federal de Ouro Preto.
+          </p>
+          <p> 
+            O Núcleo conta com pesquisadores da própria Instituição e de outras Universidades, no formato de parcerias interinstitucionais. Além disso, congrega discentes pós-graduandos, graduandos, egressos de graduação e profissionais da educação das redes públicas de 
+            ensino, da região denominadas Inconfidentes. <br>
+          </p>
+          <p>
+            O NEPPPE tem por finalidades desenvolver pesquisas em Políticas Públicas de Educação, assim como fomentar estudos relativos a essa área. Ademais, busca-se produzir e difundir conhecimento em torno da temática, estruturar um repositório de pesquisas e trabalhos acerca de Políticas Educacionais e contribuir para a sustentação do Programa de Pós-Graduação em Educação da UFOP.
+          </p>
         </div>
     </div>
  </div>
@@ -54,10 +23,10 @@
  <div class="container">
   <div class="row">
         <div class="col-md-4 mb-4">
-          <div class="card h-50">
+          <div class="card h-60">
             <div class="card-body">
-              <h5 class="card-title">Nossas pesquisas</h5>
-              <p class="card-text" align="justify">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Rem magni quas ex numquam, maxime minus quam molestias corporis quod, ea minima accusamus.</p>
+              <h5 class="card-title"><center>Nossas pesquisas</center></h5>
+              <p class="card-text" align="justify">Dedicam-se ao desenvolvimento de pesquisas que investiguem a governança educacional, Nova Gestão Pública e Educação, Permeabilidade estatal nas políticas educacionais, Sociologia Relacional e atores políticos na área educacional e Ciclo de Políticas Públicas de Educação. </p>
             </div>
             <div class="card-footer">
               <div align="center">
@@ -68,10 +37,10 @@
         </div>
         <!-- /.col-md-4 -->
         <div class="col-md-4 mb-4">
-          <div class="card h-50">
+          <div class="card h-60">
             <div class="card-body">
-              <h5 class="card-title">Base de dados</h5>
-              <p class="card-text" align="justify">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quod tenetur ex natus at dolorem enim! Nesciunt pariatur voluptatem sunt quam eaque, vel, non in id dolore voluptates quos eligendi labore.</p>
+              <h5 class="card-title"><center>Base de dados</center></h5>
+              <p class="card-text" align="justify">​Censo Escolar-INEP, Indicadores Educacionais-INEP, Medida de Base Governista-Basômetro e Radar Parlamentar, Indicadores Municipais-MUNIC/IBGE, Mapa Organizações da Sociedade Civil-IPEA, CEPIM, Planos Municipais de Educação</p>
             </div>
             <div class="card-footer">
               <div align="center">
@@ -82,10 +51,10 @@
         </div>
         <!-- /.col-md-4 -->
         <div class="col-md-4 mb-4">
-          <div class="card h-50">
+          <div class="card h-60">
             <div class="card-body">
-              <h5 class="card-title">Repositório</h5>
-              <p class="card-text" align="justify">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Rem magni quas ex numquam, maxime minus quam molestias corporis quod, ea minima accusamus.</p>
+              <h5 class="card-title"><center>Repositório</center></h5>
+              <p class="card-text" align="justify">Artigos, Teses e Dissertações cujas temáticas circunscrevem-se a Nova Gestão Pública, Governança Educacional, Permeabilidade Estatal, Sociologia Relacional, Terceiro Setor e Educação.</p>
             </div>
             <div class="card-footer">
               <div align="center">
@@ -95,15 +64,3 @@
           </div>
         </div>
  </div>
-
-<!--
-  <div class="container">
-    <div class="row">
-      <div class="col bgbody text-white rounded">
-        <p>
-        O Nepppe é o núcleo de estudos e pesquisas em políticas públicas de educação do ICHS UFOP. O Nepppe é o núcleo de estudos e pesquisas em políticas públicas de educação do ICHS UFOP.O Nepppe é o núcleo de estudos e pesquisas em políticas públicas de educação do ICHS UFOP.O Nepppe é o núcleo de estudos e pesquisas em políticas públicas de educação do ICHS UFOP.O Nepppe é o núcleo de estudos e pesquisas em políticas públicas de educação do ICHS UFOP.O Nepppe é o núcleo de estudos e pesquisas em políticas públicas de educação do ICHS UFOP.O Nepppe é o núcleo de estudos e pesquisas em políticas públicas de educação do ICHS UFOP.O Nepppe é o núcleo de estudos e pesquisas em políticas públicas de educação do ICHS UFOP.O Nepppe é o núcleo de estudos e pesquisas em políticas públicas de educação do ICHS UFOP.O Nepppe é o núcleo de estudos e pesquisas em políticas públicas de educação do ICHS UFOP.
-      </p>
-      </div>
-    </div>
-  </div>
--->
