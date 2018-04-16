@@ -37,7 +37,7 @@
 					<li>Roberto Fernandes Ferreira - Artes Cênicas/DEART/UFOP - <a href="http://lattes.cnpq.br/0070355391163179">lattes</a></li>
 					<li>Mateus Versieux de Souza - História/ICHS/UFOP - <a href="http://lattes.cnpq.br/1367064713393841">lattes</a></li>
 					<li>​J​oão Luiz Batista Meneghini - Pedagogia/ICHS/UFOP - <a href="http://lattes.cnpq.br/5375302418960744">lattes</a></li>
-					<li>Maria Luísa Matos - Pedagogia/ICHS/UFOP - <a href="#">lattes</a></li>
+					<li>Maria Luísa Patrocínio Souza - Pedagogia/ICHS/UFOP - <a href="http://lattes.cnpq.br/1425825324041469">lattes</a></li>
 				</ul>
 			</div>
 		</div>
