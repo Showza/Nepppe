@@ -1,7 +1,7 @@
 <!--footer-->
-    <div class="container">
+    <div class="container-fluid">
         <div class="row">
-            <div class="col-12 rounded">
+            <div class="col">
                 <a class="btn btn-red btn-block" role="button" href="http://voluta.ufop.br/" style="color: #ffffff; background-color: #790505; border-color: #790505; margin-top: 30px;">&copy; Voluta Soluções Digitais, <script type="text/javascript">
                                         var theDate=new Date()
                                         document.write(theDate.getFullYear())

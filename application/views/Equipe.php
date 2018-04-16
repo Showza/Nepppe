@@ -37,15 +37,16 @@
 					<li>Roberto Fernandes Ferreira - Artes Cênicas/DEART/UFOP - <a href="http://lattes.cnpq.br/0070355391163179">lattes</a></li>
 					<li>Mateus Versieux de Souza - História/ICHS/UFOP - <a href="http://lattes.cnpq.br/1367064713393841">lattes</a></li>
 					<li>​J​oão Luiz Batista Meneghini - Pedagogia/ICHS/UFOP - <a href="http://lattes.cnpq.br/5375302418960744">lattes</a></li>
-
+					<li>Maria Luísa Matos - Pedagogia/ICHS/UFOP - <a href="#">lattes</a></li>
 				</ul>
 			</div>
 		</div>
 	</div>		
 <div class="container" style="margin-bottom: 20px">
-		<div class="row">
-			<div class="col-12">
-				<img src="<?php echo base_url('/assets/frontend/img/pessoas.jpg');?>" class="img-fluid">
-			</div>
+	<div class="row">
+		<div class="col-12">
+			<img src="<?php echo base_url('/assets/frontend/img/pessoas.png');?>" class="img-fluid">
+			<center><label>Fotografia por Danúsia Natália</label></center>
 		</div>
 	</div>
+</div>
