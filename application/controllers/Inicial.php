@@ -6,7 +6,9 @@ class Inicial extends CI_Controller {
 	
 	public function index()
 	{
-		$this->load->view('Template/Html-header');
+		$this->load->model('midias_model','model_eventos');
+		$dados['eventos'] = $this->model_eventos->listar_eventos();
+		$this->load->view('Template/Html-header',$dados);
 		$this->load->view('Template/Header');
 		$this->load->view('Home');
 		$this->load->view('Template/Footer');
@@ -39,6 +41,18 @@ class Inicial extends CI_Controller {
 		$this->load->view('Template/Footer');
 		$this->load->view('Template/Html-footer');
 	}
+	public function midias()
+	{
+		$this->load->model('midias_model','model_midias');
+		$dados['midias'] = $this->model_midias->listar_midias();
+		$this->load->view('Template/Html-header',$dados);
+		$this->load->view('Template/Header');
+		$this->load->view('midias');
+		$this->load->view('Template/Footer');
+		$this->load->view('Template/Html-footer');
+	}
+
+
 
 	public function pesquisas()
 	{

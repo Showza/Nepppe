@@ -64,3 +64,52 @@
           </div>
         </div>
  </div>
+
+ <div class="container">
+      <br>
+  <div id="myCarousel" class="carousel slide col-8" data-ride="carousel" >
+    <div class="carousel-inner row w-100 mx-auto">
+      
+        <?php  
+            $cont=2;
+            foreach ($eventos as $evento) {
+              if ($cont==2){    
+        ?>
+            <div class="carousel-item col-md-8 active">    
+        <?php 
+            $cont=1; 
+            }else{
+        ?>    
+            <div class="carousel-item col-md-8">    
+        <?php   
+          }
+        ?>
+
+      
+
+        <div class="card">
+        <div class="card-body" align="center">
+            <h4 class="card-title" ><?php echo $evento->titulo; ?></h4>
+            <br>
+            <p class="card-text">
+           
+                  <a href="<?php echo $evento->link; ?>" class="btn btn-primary center-block" style="color: #ffffff; background-color: #790505; border-color: #790505">Acessar</a>
+                
+            </p>
+          </div>
+        </div>
+      </div>
+      <?php 
+        }
+       ?>
+    </div>
+    <a class="carousel-control-prev" href="#myCarousel" role="button" data-slide="prev">
+      <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+      <span class="sr-only">Previous</span>
+    </a>
+    <a class="carousel-control-next" href="#myCarousel" role="button" data-slide="next">
+      <span class="carousel-control-next-icon" aria-hidden="true"></span>
+      <span class="sr-only">Next</span>
+    </a>
+  </div>
+</div>

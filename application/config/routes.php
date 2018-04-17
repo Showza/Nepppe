@@ -65,6 +65,7 @@ $route['index'] = 'Inicial';
 $route['pessoas'] = 'Inicial/equipe';
 $route['contato'] = 'Inicial/contato';
 $route['sobre'] = 'Inicial/sobre';
+$route['midias'] = 'Inicial/midias';
 
 $route['pesquisas'] = 'Inicial/pesquisas';
 $route['repositorio'] = 'Inicial/repositorio';
