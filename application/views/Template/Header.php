@@ -10,20 +10,31 @@
         <div class="collapse navbar-collapse" id="navbarResponsive">
           <ul class="navbar-nav ml-auto">
             <li class="nav-item">
+              <button type="button" class="btn btn-neppe btn-sm btn-block" >
               <a class="nav-link js-scroll-trigger" href="<?php echo site_url('index')?>" style="color: #ffffff;">Início</a>
+              </button>
             </li>
             <li class="nav-item">
+               <button type="button" class="btn btn-neppe btn-sm btn-block" >
               <a class="nav-link js-scroll-trigger" href="<?php echo site_url('sobre')?>" style="color: #ffffff;">Sobre</a>
+               </button>
             </li>
             <li class="nav-item">
+              <button type="button" class="btn btn-neppe btn-sm btn-block" >
               <a class="nav-link js-scroll-trigger" href="<?php echo site_url('pessoas')?>" style="color: #ffffff;">Pessoas</a>
+               </button>
             </li>
             <li class="nav-item">
+              <button type="button" class="btn btn-neppe btn-sm btn-block" >
               <a class="nav-link js-scroll-trigger" href="<?php echo site_url('contato')?>" style="color: #ffffff;">Contato</a>
+              </button>
             </li>
             <li class="nav-item">
-              <a class="nav-link js-scroll-trigger" href="<?php echo site_url('Midias')?>" style="color: #ffffff;">Mídia</a>
+              <button type="button" class="btn btn-neppe btn-sm btn-block"  >
+              <a class="nav-link js-scroll-trigger" href="<?php echo site_url('midias')?>" style="color: #ffffff;">Mídia</a>
+              </button>
             </li>
+
           </ul>
         </div>
       </div>
@@ -58,3 +69,4 @@
 </head>
 
 <body>
+  <conteudo>
