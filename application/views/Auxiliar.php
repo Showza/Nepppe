@@ -8,11 +8,12 @@
       NEPPPE - Página do Auxiliar
     </div>
     <div class="col" style="color:#ffffff; background-color:#790505; border-color:#790505;">
-      <a href="<?php echo site_url('evento')?>" class="btn btn-dark btn-sm navbar-right">Cadastrar Evento</a>
-      <a href="<?php echo site_url('midia')?>" class="btn btn-dark btn-sm navbar-right">Cadastrar Mídia</a>
-      <a href="<?php echo site_url('pesquisa')?>" class="btn btn-dark btn-sm navbar-right">Cadastrar Pesquisa</a>
-      <a href="<?php echo site_url('documento')?>" class="btn btn-dark btn-sm navbar-right">Cadastrar Documento</a>
-      <a href="<?php echo site_url('logout')?>" class="btn btn-dark btn-sm navbar-right">Logout</a>
+      <a href="<?php echo site_url('evento')?>" class="btn btn-sm navbar-left" style="color:#ffffff;">Cadastrar Evento</a>
+      <a href="<?php echo site_url('midia')?>" class="btn btn-sm navbar-left" style="color:#ffffff;">Cadastrar Mídia</a>
+      <a href="<?php echo site_url('pesquisa')?>" class="btn btn-sm navbar-left" style="color:#ffffff;">Cadastrar Pesquisa</a>
+      <a href="<?php echo site_url('documento')?>" class="btn btn-sm navbar-left" style="color:#ffffff;">Cadastrar Documento</a>
+      <a href="<?php echo site_url('pessoa')?>" class="btn btn-sm navbar-left" style="color:#ffffff;">Cadastrar Pessoa</a>
+      <a href="<?php echo site_url('logout')?>" class="btn btn-sm navbar-left" style="color:#ffffff;">Logout</a>
     </div>
   </div>
 </div>
@@ -25,6 +26,7 @@
     <li><a data-toggle="tab" href="#pesquisas" style="color: #ffffff; background-color: #790505; border-color: #790505;">Pesquisas</a></li>
     <li><a data-toggle="tab" href="#documentos" style="color: #ffffff; background-color: #790505; border-color: #790505;">Documentos</a></li>
     <li><a data-toggle="tab" href="#midia" style="color: #ffffff; background-color: #790505; border-color: #790505;">Mídia</a></li>
+    <li><a data-toggle="tab" href="#pessoas" style="color: #ffffff; background-color: #790505; border-color: #790505;">Pessoas</a></li>
   </ul>
 
   <div class="tab-content">
@@ -175,6 +177,45 @@
                       </div>
                       <div class="col">
                         <a class="customlink" title="Excluir evento" href="<?php echo site_url('Midias/excluir/'.$row->id)?>"><i class="material-icons">Excluir</i></a>      
+                      </div> 
+                    </td>
+                  </tr><?php } ?>
+                </tbody>
+              </table>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div id="pessoas" class="tab-pane fade">
+      <div class="container-fluid">
+        <div class="row">
+          <div class="col" style="margin-top: 10px; margin-bottom: 10px;">
+            <table class="table table-striped" style="margin-top: 0px">
+                <thead style="color: #ffffff; background-color: #790505; border-color: #790505;">
+                  <tr>
+                    <th scope="col">Nome</th>
+                    <th>Categoria</th>
+                    <th>Departamento</th>
+                    <th>Currículo</th>
+                    <th>Opção</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <?php
+                      $query = $this->db->get('pessoas');
+                      foreach ($query->result() as $row) {
+                      ?>
+                  <tr>
+                    <th scope="row"><?php echo $row->nome;?></th>
+                    <td><?php echo $row->categoria;?></td>
+                    <td><?php echo $row->departamento;?></td>
+                    <td><a class="customlink" href="<?php echo $row->curriculo; ?>" target="_blank">Currículo Lattes</a></td>
+                    <td>
+                      <div class="col">
+                        <a class="customlink" title="Atualizar dados da pessoa" href="<?php echo site_url('Pessoas/pagina_edicao/'.$row->id)?>">Editar</a> 
+                      </div>
+                      <div class="col">
+                        <a class="customlink" title="Excluir dados da pessoa" href="<?php echo site_url('Pessoas/excluir/'.$row->id)?>"><i class="material-icons">Excluir</i></a>      
                       </div> 
                     </td>
                   </tr><?php } ?>
