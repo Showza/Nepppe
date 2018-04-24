@@ -21,95 +21,189 @@
  </div>
 
  <div class="container">
-  <div class="row">
-        <div class="col-md-4 mb-4">
-          <div class="card h-60">
-            <div class="card-body">
-              <h5 class="card-title"><center>Nossas pesquisas</center></h5>
-              <p class="card-text" align="justify">Dedicam-se ao desenvolvimento de pesquisas que investiguem a governança educacional, Nova Gestão Pública e Educação, Permeabilidade estatal nas políticas educacionais, Sociologia Relacional e atores políticos na área educacional e Ciclo de Políticas Públicas de Educação. </p>
-            </div>
-            <div class="card-footer">
-              <div align="center">
-                  <a href="<?php echo site_url('pesquisas')?>" class="btn btn-primary center-block" style="color: #ffffff; background-color: #790505; border-color: #790505";>Ir para pesquisas</a>
-                </div>
-            </div>
-          </div>
-        </div>
-        <!-- /.col-md-4 -->
-        <div class="col-md-4 mb-4">
-          <div class="card h-60">
-            <div class="card-body">
-              <h5 class="card-title"><center>Base de dados</center></h5>
-              <p class="card-text" align="justify">​Censo Escolar-INEP, Indicadores Educacionais-INEP, Medida de Base Governista-Basômetro e Radar Parlamentar, Indicadores Municipais-MUNIC/IBGE, Mapa Organizações da Sociedade Civil-IPEA, CEPIM, Planos Municipais de Educação</p>
-            </div>
-            <div class="card-footer">
-              <div align="center">
-                  <a href="http://estadaodados.com/basometro/" class="btn btn-primary center-block" style="color: #ffffff; background-color: #790505; border-color: #790505">Basômetro</a>
-                </div>
+    <div class="row">
+          <div class="col-md-4 mb-4">
+            <div class="card h-60">
+              <div class="card-body">
+                <h5 class="card-title"><center>Nossas pesquisas</center></h5>
+                <p class="card-text" align="justify">Dedicam-se ao desenvolvimento de pesquisas que investiguem a governança educacional, Nova Gestão Pública e Educação, Permeabilidade estatal nas políticas educacionais, Sociologia Relacional e atores políticos na área educacional e Ciclo de Políticas Públicas de Educação. </p>
+              </div>
+              <div class="card-footer">
+                <div align="center">
+                    <a href="<?php echo site_url('pesquisas')?>" class="btn btn-primary center-block" style="color: #ffffff; background-color: #790505; border-color: #790505";>Ir para pesquisas</a>
+                  </div>
+              </div>
             </div>
           </div>
-        </div>
-        <!-- /.col-md-4 -->
-        <div class="col-md-4 mb-4">
-          <div class="card h-60">
-            <div class="card-body">
-              <h5 class="card-title"><center>Repositório</center></h5>
-              <p class="card-text" align="justify">Artigos, Teses e Dissertações cujas temáticas circunscrevem-se a Nova Gestão Pública, Governança Educacional, Permeabilidade Estatal, Sociologia Relacional, Terceiro Setor e Educação.</p>
-            </div>
-            <div class="card-footer">
-              <div align="center">
-                  <a href="<?php echo site_url('repositorio')?>" class="btn btn-primary" style="color: #ffffff; background-color: #790505; border-color: #790505;">Ir para repositório</a>
-                </div>
+          <!-- /.col-md-4 -->
+          <div class="col-md-4 mb-4">
+            <div class="card h-60">
+              <div class="card-body">
+                <h5 class="card-title"><center>Base de dados</center></h5>
+                <p class="card-text" align="justify">​Censo Escolar-INEP, Indicadores Educacionais-INEP, Medida de Base Governista-Basômetro e Radar Parlamentar, Indicadores Municipais-MUNIC/IBGE, Mapa Organizações da Sociedade Civil-IPEA, CEPIM, Planos Municipais de Educação</p>
+              </div>
+              <div class="card-footer">
+                <div align="center">
+                    <a href="http://estadaodados.com/basometro/" class="btn btn-primary center-block" style="color: #ffffff; background-color: #790505; border-color: #790505">Basômetro</a>
+                  </div>
+              </div>
             </div>
           </div>
-        </div>
- </div>
+          <!-- /.col-md-4 -->
+          <div class="col-md-4 mb-4">
+            <div class="card h-60">
+              <div class="card-body">
+                <h5 class="card-title"><center>Repositório</center></h5>
+                <p class="card-text" align="justify">Artigos, Teses e Dissertações cujas temáticas circunscrevem-se a Nova Gestão Pública, Governança Educacional, Permeabilidade Estatal, Sociologia Relacional, Terceiro Setor e Educação.</p>
+              </div>
+              <div class="card-footer">
+                <div align="center">
+                    <a href="<?php echo site_url('repositorio')?>" class="btn btn-primary" style="color: #ffffff; background-color: #790505; border-color: #790505;">Ir para repositório</a>
+                  </div>
+              </div>
+            </div>
+          </div>
+    </div>
+  </div>
+  <div class="container">
+    
+    <div class="col-12">
+            <div id="carouselExampleIndicators" class="border border-light carousel slide" data-ride="carousel">
+                <ol class="carousel-indicators">
 
- <div class="container">
-      <br>
-  <div id="myCarousel" class="carousel slide col-8" data-ride="carousel" >
-    <div class="carousel-inner row w-100 mx-auto">
-      
-        <?php  
-            $cont=2;
-            foreach ($eventos as $evento) {
-              if ($cont==2){    
-        ?>
-            <div class="carousel-item col-md-8 active">    
-        <?php 
-            $cont=1; 
-            }else{
-        ?>    
-            <div class="carousel-item col-md-8">    
-        <?php   
-          }
-        ?>
+            <?php  
+                  $cont=2;
+                  foreach ($eventos as $evento) {
+                    if ($cont==2){    
+              ?>
+        <li data-target="#carouselExampleIndicators" data-slide-to="<?php echo $evento->id; ?>" class="active"></li>
 
-      
+                <?php 
+                    $cont=1; 
+                    }else{
+                ?>    
+           <li data-target="#carouselExampleIndicators" data-slide-to="<?php echo $evento->id; ?>"></li>
+                  <?php   
+                    }}
+                  ?>
+                  
+                  
+                  
+                </ol>
+                <div class="carousel-inner" role="listbox">
+                      <?php  
+                  $cont=2;
+                  foreach ($eventos as $evento) {
+                    if ($cont==2){    
+                  ?>
+                  
+                    <div class="carousel-item active boxer">
 
-        <div class="card">
-        <div class="card-body" align="center">
-            <h4 class="card-title" ><?php echo $evento->titulo; ?></h4>
-            <br>
-            <p class="card-text">
-           
-                  <a href="<?php echo $evento->link; ?>" class="btn btn-primary center-block" style="color: #ffffff; background-color: #790505; border-color: #790505">Acessar</a>
-                
+                    <img class="d-block imgcarrousel" src="http://www.ufop.br/sites/default/files/styles/topo_da_not_cia/public/ichs.png?itok=LzYvatsY" alt="Imagem">
+                    <div class="grupo">
+                        <div class="conteudo">
+                              <h4><?php echo $evento->titulo; ?></h4>
+                              <a class="" href="<?php echo $evento->link; ?>" >
+                                  <button  id="link" class="btn btn-neppe">Acessar</button>
+                              </a> 
+                        </div>
+                      
+                    </div>
+                  </div>
+                <?php 
+                    $cont=1; 
+                    }else{
+                ?>    
+                        <div class="carousel-item boxer">
+
+                    <img class="d-block imgcarrousel" src="http://www.ufop.br/sites/default/files/styles/topo_da_not_cia/public/ichs.png?itok=LzYvatsY" alt="Imagem">
+                    <div class="grupo">
+                        <div class="conteudo">
+                              <h4><?php echo $evento->titulo; ?></h4>
+                              <a class="" href="<?php echo $evento->link; ?>" >
+                                  <button  id="link" class="btn btn-neppe">Acessar</button>
+                              </a> 
+                        </div>
+                      
+                    </div>
+                  </div>                  <?php   
+                    }}
+                  ?>
+               
+
+                </div>
+                <a class="carousel-control-prev" href="#carouselExampleIndicators" role="button" data-slide="prev">
+                  <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                  <span class="sr-only">Previous</span>
+                </a>
+                <a class="carousel-control-next" href="#carouselExampleIndicators" role="button" data-slide="next">
+                  <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                  <span class="sr-only">Next</span>
+                </a>
+              </div>  
+ <br><br><br><br>
+      </div>
+     
+  <div class="col-12">
+              <div class="col-md-12 mb-12">
+        <div class="card h-60">
+          <div class="card-footer">
+            <h5 class="card-title"><center>Links úteis</center></h5>
+            <p class="card-text" align="justify">
+              
+              
+            
+              <ul class="list-group">
+                <li class="list-group-item-neppe d-flex justify-content-between align-items-center">ABAVE - Associação Brasileira de Avaliação Educacional
+                    <a href="http://ixreuniao.abave.org.br/"><span class="btn btn-neppe badge-pill">Acessar</span></a>
+                </li>
+                <li class="list-group-item-neppe d-flex justify-content-between align-items-center">ANPAE - Associação Nacional de Política e Administração da Educação
+                    <a href="http://www.anpae.org.br/website/"><span class="btn btn-neppe badge-pill">Acessar</span></a>
+                </li>
+                <li class="list-group-item-neppe d-flex justify-content-between align-items-center">ANPEd - Associação Nacional de Pós-Graduação e Pesquisa em Educação
+                    <a href="http://www.anped.org.br/"><span class="btn btn-neppe badge-pill">Acessar</span></a>
+                </li>
+                <li class="list-group-item-neppe d-flex justify-content-between align-items-center">Portal de Periódicos CAPES
+                    <a href="http://www.periodicos.capes.gov.br/"><span class="btn btn-neppe badge-pill">Acessar</span></a>
+                </li>
+                <li class="list-group-item-neppe d-flex justify-content-between align-items-center">ANPOCS - Associação Nacional de Pós-Graduação e Pesquisa em Ciências Sociais
+                    <a href="http//www.anpocs.com"><span class="btn btn-neppe badge-pill">Acessar</span></a>
+                </li>
+                 <li class="list-group-item-neppe d-flex justify-content-between align-items-center">INEP
+                    <a href="http://portal.inep.gov.br/indicadores-educacionais"><span class="btn btn-neppe badge-pill">Acessar</span></a>
+                </li>
+                 <li class="list-group-item-neppe d-flex justify-content-between align-items-center">Mapa da Sociedade Civil Organizada-IPEA
+                    <a href="https://mapaosc.ipea.gov.br/"><span class="btn btn-neppe badge-pill">Acessar</span></a>
+                </li>
+                 <li class="list-group-item-neppe d-flex justify-content-between align-items-center">MUNIC/IBGE
+                    <a href="https://ww2.ibge.gov.br/home/estatistica/economia/perfilmunic/default.shtm"><span class="btn btn-neppe badge-pill">Acessar</span></a>
+                </li>
+                 <li class="list-group-item-neppe d-flex justify-content-between align-items-center">IBGE/Estados
+                    <a href="https://ww2.ibge.gov.br/estadic2014/"><span class="btn btn-neppe badge-pill">Acessar</span></a>
+                </li>
+                 <li class="list-group-item-neppe d-flex justify-content-between align-items-center">Laboratório de Dados Educacionais
+                    <a href="https://dadoseducacionais.c3sl.ufpr.br/#/"><span class="btn btn-neppe badge-pill">Acessar</span></a>
+                </li>
+                <li class="list-group-item-neppe d-flex justify-content-between align-items-center">GIAR/UFMG
+                    <a href="http://www.giars.ufmg.br/?r=site/index_pt"><span class="btn btn-neppe badge-pill">Acessar</span></a>
+                </li>
+                <li class="list-group-item-neppe d-flex justify-content-between align-items-center">REIPPE
+                    <a href="https://redereippe.wixsite.com/reippe"><span class="btn btn-neppe badge-pill">Acessar</span></a>
+                </li>
+                <li class="list-group-item-neppe d-flex justify-content-between align-items-center">Radar Parlamentar
+                    <a href="http://radarparlamentar.polignu.org/"><span class="btn btn-neppe badge-pill">Acessar</span></a>
+                </li>
+                <li class="list-group-item-neppe d-flex justify-content-between align-items-center">Programa de Pós-Graduação em Educação da UFOP
+                    <a href="http://posedu.ufop.br/"><span class="btn btn-neppe badge-pill">Acessar</span></a>
+                </li>
+                <li class="list-group-item-neppe d-flex justify-content-between align-items-center">Plataforma Lattes
+                    <a href="http://lattes.cnpq.br/"><span class="btn btn-neppe badge-pill">Acessar</span></a>
+                </li>
+              </ul>
             </p>
           </div>
         </div>
       </div>
-      <?php 
-        }
-       ?>
     </div>
-    <a class="carousel-control-prev" href="#myCarousel" role="button" data-slide="prev">
-      <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-      <span class="sr-only">Previous</span>
-    </a>
-    <a class="carousel-control-next" href="#myCarousel" role="button" data-slide="next">
-      <span class="carousel-control-next-icon" aria-hidden="true"></span>
-      <span class="sr-only">Next</span>
-    </a>
-  </div>
-</div>
+</div>    
+<br><br>
