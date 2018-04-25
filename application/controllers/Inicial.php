@@ -41,6 +41,16 @@ class Inicial extends CI_Controller {
 		$this->load->view('Template/Footer');
 		$this->load->view('Template/Html-footer');
 	}
+
+	public function basedados()
+	{
+		$this->load->view('Template/Html-header');
+		$this->load->view('Template/Header');
+		$this->load->view('Basedados');
+		$this->load->view('Template/Footer');
+		$this->load->view('Template/Html-footer');
+	}
+
 	public function midias()
 	{
 		$this->load->model('midias_model','model_midias');

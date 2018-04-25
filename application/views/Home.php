@@ -44,7 +44,7 @@
               </div>
               <div class="card-footer">
                 <div align="center">
-                    <a href="http://estadaodados.com/basometro/" class="btn btn-primary center-block" style="color: #ffffff; background-color: #790505; border-color: #790505">Basômetro</a>
+                  <a href="<?php echo site_url('basedados')?>" class="btn btn-primary center-block" style="color: #ffffff; background-color: #790505; border-color: #790505";>Ir para Base de Dados</a>
                   </div>
               </div>
             </div>
