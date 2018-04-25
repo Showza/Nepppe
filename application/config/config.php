@@ -23,9 +23,9 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 | a PHP script and you can easily do that on your own.
 |
 */
-/*Para rodar localhost use: 
-$config['base_url'] = 'http://localhost/Nepppe';*/
-
+/*Para rodar localhost use:
+$config['base_url'] = 'http://localhost/Nepppe';
+ */
 /*Para rodar no servidor web use: */
 $config['base_url'] = 'http://nepppe.ufop.br';
 

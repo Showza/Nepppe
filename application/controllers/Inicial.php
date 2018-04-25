@@ -47,10 +47,7 @@ class Inicial extends CI_Controller {
 		$dados['midias'] = $this->model_midias->listar_midias();
 		$this->load->view('Template/Html-header',$dados);
 		$this->load->view('Template/Header');
-
 		$this->load->view('Midias');
-   
-
 		$this->load->view('Template/Footer');
 		$this->load->view('Template/Html-footer');
 	}

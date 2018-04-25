@@ -1,110 +1,169 @@
-<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+<br>
   
 
 <div class="container">
   <h2>Repositório</h2>
-  <ul class="nav nav-tabs">
-    <li class="active"><a data-toggle="tab" href="#pesquisas" style="color: #ffffff; background-color: #790505; border-color: #790505;">Pesquisas</a></li>
-    <li><a data-toggle="tab" href="#artigos" style="color: #ffffff; background-color: #790505; border-color: #790505;">Artigos</a></li>
-    <li><a data-toggle="tab" href="#livros" style="color: #ffffff; background-color: #790505; border-color: #790505;">Livros</a></li>
-    <li><a data-toggle="tab" href="#teses" style="color: #ffffff; background-color: #790505; border-color: #790505;">Teses e dissertações</a></li>
+  <ul class="nav nav-tabs border-bottom-2" role="tablist">
+    <li class="nav-item">
+      <a class="nav-link active linkremove " href="#pesquisas" role="tab" data-toggle="tab">Pesquisas</a>
+    </li>
+    <li class="nav-item">
+      
+      <a class="nav-link linkremove" data-toggle="tab" href="#artigos">Artigos</a>
+    </li>
+    <li class="nav-item">
+      
+      <a class="nav-link linkremove" data-toggle="tab" href="#livros">Livros</a>
+    </li>
+    <li class="nav-item">
+      
+      <a class="nav-link linkremove" data-toggle="tab" href="#teses">Teses e dissertações</a>
+    </li>
   </ul>
 
-  <div class="tab-content">
-    <div id="pesquisas" class="tab-pane fade">
-      <!-- fazer para cada uma das pesquisas em andamento-->
-      <?php
-      $this->db->where('categoria', "1");
-      $this->db->order_by('titulo', 'ASC');
-      $query = $this->db->get('documentos');
-      foreach ($query->result() as $row){
-      ?><br>
-      <div class="dropdown">
-        <button id="dLabel" type="button" class="btn btn-lg btn-block" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" style="color: #ffffff; background-color: #790505; border-color: #790505;">
-          <?php echo $row->titulo; ?>
-          <span class="caret"></span>
-        </button>
-      <div class="container col-md-12 dropdown-menu" aria-labelledby="dLabel">
-      <p><h2>Resumo </h2><br>
-        <?php echo $row->resumo;
-        ?> <br>
-        <h2>Conteúdo </h2> <br> 
-          <?php echo $row->conteudo; ?></p>
+    <div class="tab-content">
+        <div role="tabpanel" class="tab-pane active" id="pesquisas" >
+            <div id="accordion">
+                   <!-- fazer para cada uma das pesquisas em andamento-->
+                    <?php
+                    $this->db->where('tipo', "Pesquisa");
+                    $this->db->order_by('titulo', 'ASC');
+                    $query = $this->db->get('repositorio');
+                    foreach ($query->result() as $row){
+                    ?>
+
+
+                        <div class="card">
+                          <div class="card-header" id="headingOne">
+                            <h5 class="mb-0">
+                              <button class="btn btn-link" style="text-decoration: none;color:black;" data-toggle="collapse" data-target="#<?php echo $row->id; ?>" aria-expanded="true" aria-controls="<?php echo $row->id; ?>">
+                                  <?php echo $row->titulo; ?>
+                              </button>
+                            </h5>
+                          </div>
+
+                          <div id="<?php echo $row->id; ?>" class="collapse" aria-labelledby="<?php echo $row->id; ?>" data-parent="#accordion">
+                                <div class="card-body">   
+                                    <p><h5>Resumo </h5>
+                                    <?php echo $row->resumo;?> 
+                                    <h5>Conteúdo </h5>
+                                    <p class="lead"> <?php echo $row->conteudo; ?></p>
+                                  </div>
+                                </div>
+                                <?php } ?>
+                              </div>
+
+            </div>
+        </div>
       </div>
-      </div><br><br>
-      <?php } ?>
-      <br><br>
+
+
+       <div id="artigos" class="tab-pane fade-in">
+            <div id="accordion">
+    
+          <!-- fazer para cada uma das pesquisas em andamento-->
+          <?php
+          $this->db->where('tipo', "Artigo");
+          $this->db->order_by('titulo', 'ASC');
+          $query = $this->db->get('repositorio');
+          foreach ($query->result() as $row){
+          ?>
+
+
+              <div class="card">
+                <div class="card-header" id="headingOne">
+                  <h5 class="mb-0">
+                    <button class="btn btn-link" style="text-decoration: none;color:black;" data-toggle="collapse" data-target="#<?php echo $row->id; ?>" aria-expanded="true" aria-controls="<?php echo $row->id; ?>">
+                        <?php echo $row->titulo; ?>
+                    </button>
+                  </h5>
+                </div>
+
+                <div id="<?php echo $row->id; ?>" class="collapse" aria-labelledby="<?php echo $row->id; ?>" data-parent="#accordion">
+                      <div class="card-body">   
+                          <p><h5>Resumo </h5>
+                          <p class="lead"> <?php echo $row->resumo;?> </p>
+                          <h5>Conteúdo </h5>
+                          <p class="lead"> <?php echo $row->conteudo; ?></p>
+                        </div>
+                      </div>
+                      <?php } ?>
+                    </div>
+
+                </div>
+      
+
     </div>
-    <div id="artigos" class="tab-pane fade">
-      <!-- fazer para cada uma das pesquisas em andamento-->
-      <?php
-      $this->db->where('categoria', "2");
-      $this->db->order_by('titulo', 'ASC');
-      $query = $this->db->get('documentos');
-      foreach ($query->result() as $row){
-      ?><br>
-      <div class="dropdown">
-        <button id="dLabel" type="button" class="btn btn-lg btn-block" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" style="color: #ffffff; background-color: #790505; border-color: #790505;">
-          <?php echo $row->titulo; ?>
-          <span class="caret"></span>
-        </button>
-      <div class="container col-md-12 dropdown-menu" aria-labelledby="dLabel">
-      <p><h2>Resumo </h2><br>
-        <?php echo $row->resumo;
-        ?> <br>
-        <h2>Conteúdo </h2> <br> 
-          <?php echo $row->conteudo; ?></p>
-      </div>
-      </div><br><br>
-      <?php } ?>
-      <br><br>
-    </div>
-    <div id="livros" class="tab-pane fade">
-      <!-- fazer para cada uma das pesquisas em andamento-->
-      <?php
-      $this->db->where('categoria', "3");
-      $this->db->order_by('titulo', 'ASC');
-      $query = $this->db->get('documentos');
-      foreach ($query->result() as $row){
-      ?><br>
-      <div class="dropdown">
-        <button id="dLabel" type="button" class="btn btn-lg btn-block" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" style="color: #ffffff; background-color: #790505; border-color: #790505;">
-          <?php echo $row->titulo; ?>
-          <span class="caret"></span>
-        </button>
-      <div class="container col-md-12 dropdown-menu" aria-labelledby="dLabel">
-      <p><h2>Resumo </h2><br>
-        <?php echo $row->resumo;
-        ?> <br>
-        <h2>Conteúdo </h2> <br> 
-          <?php echo $row->conteudo; ?></p>
-      </div>
-      </div><br><br>
-      <?php } ?>
-      <br><br>
-    </div>
-    <div id="teses" class="tab-pane fade">
-      <!-- fazer para cada uma das pesquisas em andamento-->
-      <?php
-      $this->db->where('categoria', "5");
-      $this->db->order_by('titulo', 'ASC');
-      $query = $this->db->get('documentos');
-      foreach ($query->result() as $row){
-      ?><br>
-      <div class="dropdown">
-        <button id="dLabel" type="button" class="btn btn-lg btn-block" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" style="color: #ffffff; background-color: #790505; border-color: #790505;">
-          <?php echo $row->titulo; ?>
-          <span class="caret"></span>
-        </button>
-      <div class="container col-md-12 dropdown-menu" aria-labelledby="dLabel">
-      <p><h2>Resumo </h2><br>
-        <?php echo $row->resumo;
-        ?> <br>
-        <h2>Conteúdo </h2> <br> 
-          <?php echo $row->conteudo; ?></p>
-      </div>
-      </div><br><br>
-      <?php } ?>
-      <br><br>
-    </div>
+                <div role="tabpanel" class="tab-pane fade-in" id="livros" >
+            <div id="accordion">
+                   <!-- fazer para cada uma das pesquisas em andamento-->
+                    <?php
+                      $this->db->where('tipo', "Livros");
+                      $this->db->order_by('titulo', 'ASC');
+                      $query = $this->db->get('repositorio');
+                      foreach ($query->result() as $row){
+                      ?>
+
+
+                        <div class="card">
+                          <div class="card-header" id="headingOne">
+                            <h5 class="mb-0">
+                              <button class="btn btn-link" style="text-decoration: none;color:black;" data-toggle="collapse" data-target="#<?php echo $row->id; ?>" aria-expanded="true" aria-controls="<?php echo $row->id; ?>">
+                                  <?php echo $row->titulo; ?>
+                              </button>
+                            </h5>
+                          </div>
+
+                          <div id="<?php echo $row->id; ?>" class="collapse" aria-labelledby="<?php echo $row->id; ?>" data-parent="#accordion">
+                                <div class="card-body">   
+                                    <p><h5>Resumo </h5>
+                                    <?php echo $row->resumo;?> 
+                                    <h5>Conteúdo </h5>
+                                    <p class="lead"> <?php echo $row->conteudo; ?></p>
+                                  </div>
+                                </div>
+                                <?php } ?>
+                              </div>
+
+            </div>
+        </div>
+                        <div role="tabpanel" class="tab-pane fade-in" id="teses" >
+            <div id="accordion">
+                   <!-- fazer para cada uma das pesquisas em andamento-->
+                    <?php
+                      $this->db->where('tipo', "Teses");
+                      $this->db->order_by('titulo', 'ASC');
+                      $query = $this->db->get('repositorio');
+                      foreach ($query->result() as $row){
+                      ?>
+
+
+                        <div class="card">
+                          <div class="card-header" id="headingOne">
+                            <h5 class="mb-0">
+                              <button class="btn btn-link" style="text-decoration: none;color:black;" data-toggle="collapse" data-target="#<?php echo $row->id; ?>" aria-expanded="true" aria-controls="<?php echo $row->id; ?>">
+                                  <?php echo $row->titulo; ?>
+                              </button>
+                            </h5>
+                          </div>
+
+                          <div id="<?php echo $row->id; ?>" class="collapse" aria-labelledby="<?php echo $row->id; ?>" data-parent="#accordion">
+                                <div class="card-body">   
+                                    <p><h5>Resumo </h5>
+                                    <?php echo $row->resumo;?> 
+                                    <h5>Conteúdo </h5>
+                                    <p class="lead"> <?php echo $row->conteudo; ?></p>
+                                  </div>
+                                </div>
+                                <?php } ?>
+                              </div>
+
+            </div>
+        </div>
+
+
+
+    
+
 </div>
+<br><br><br><br><br><br><br><br><br>

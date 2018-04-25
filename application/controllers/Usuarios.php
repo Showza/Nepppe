@@ -50,7 +50,6 @@ class Usuarios extends CI_Controller {
 				$dadosSessao['userlogado'] = $userlogado[0];
 				$dadosSessao['logado'] = TRUE;
 				$this->session->set_userdata($dadosSessao);
-				echo $this->session->userdata('userlogado')->tipo;
 				if($this->session->userdata('userlogado')->tipo == "Administrador"){
 					redirect(site_url('Usuarios/administrador'));
 				} 
