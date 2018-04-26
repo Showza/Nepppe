@@ -27,13 +27,12 @@ class Documentos_model extends CI_Model{
 		$dados['resumo']= $resumo;
 		$dados['conteudo']= $conteudo;
 		$dados['categoria']= $categoria;
-
 		$this->db->where('id', $id);
 		return $this->db->update('documentos', $dados);
 	}
 	public function listar_dados(){
 		$this->db->order_by('titulo','ASC');
-		$this->db->where('categoria', 4);
+		$this->db->where('categoria', 'Dado');
 		return $this->db->get('documentos')->result();
 	}
 }

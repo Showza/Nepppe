@@ -24,15 +24,12 @@
     <div class="tab-content">
         <div role="tabpanel" class="tab-pane active" id="pesquisas" >
             <div id="accordion">
-                   <!-- fazer para cada uma das pesquisas em andamento-->
-                    <?php
-                    $this->db->where('tipo', "Pesquisa");
+                   <?php
+                    $this->db->where('categoria', 'Pesquisa');
                     $this->db->order_by('titulo', 'ASC');
-                    $query = $this->db->get('repositorio');
+                    $query = $this->db->get('documentos');
                     foreach ($query->result() as $row){
                     ?>
-
-
                         <div class="card">
                           <div class="card-header" id="headingOne">
                             <h5 class="mb-0">
@@ -50,9 +47,9 @@
                                     <p class="lead"> <?php echo $row->conteudo; ?></p>
                                   </div>
                                 </div>
-                                <?php } ?>
+                                
                               </div>
-
+                              <?php } ?>
             </div>
         </div>
       </div>
@@ -60,16 +57,12 @@
 
        <div id="artigos" class="tab-pane fade-in">
             <div id="accordion">
-    
-          <!-- fazer para cada uma das pesquisas em andamento-->
           <?php
-          $this->db->where('tipo', "Artigo");
+          $this->db->where('categoria', 'Artigo');
           $this->db->order_by('titulo', 'ASC');
-          $query = $this->db->get('repositorio');
+          $query = $this->db->get('documentos');
           foreach ($query->result() as $row){
           ?>
-
-
               <div class="card">
                 <div class="card-header" id="headingOne">
                   <h5 class="mb-0">
@@ -87,20 +80,18 @@
                           <p class="lead"> <?php echo $row->conteudo; ?></p>
                         </div>
                       </div>
-                      <?php } ?>
+                      
                     </div>
-
+<?php } ?>
                 </div>
-      
-
     </div>
-                <div role="tabpanel" class="tab-pane fade-in" id="livros" >
+                <div class="tab-pane fade-in" id="livros" >
             <div id="accordion">
                    <!-- fazer para cada uma das pesquisas em andamento-->
                     <?php
-                      $this->db->where('tipo', "Livros");
+                      $this->db->where('categoria', "Livro");
                       $this->db->order_by('titulo', 'ASC');
-                      $query = $this->db->get('repositorio');
+                      $query = $this->db->get('documentos');
                       foreach ($query->result() as $row){
                       ?>
 
@@ -127,17 +118,15 @@
 
             </div>
         </div>
-                        <div role="tabpanel" class="tab-pane fade-in" id="teses" >
+                        <div class="tab-pane fade-in" id="teses" >
             <div id="accordion">
                    <!-- fazer para cada uma das pesquisas em andamento-->
                     <?php
-                      $this->db->where('tipo', "Teses");
+                      $this->db->where('categoria', "Tese");
                       $this->db->order_by('titulo', 'ASC');
-                      $query = $this->db->get('repositorio');
+                      $query = $this->db->get('documentos');
                       foreach ($query->result() as $row){
                       ?>
-
-
                         <div class="card">
                           <div class="card-header" id="headingOne">
                             <h5 class="mb-0">

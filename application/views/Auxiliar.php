@@ -125,13 +125,7 @@
                       ?>
                   <tr>
                     <th scope="row"><?php echo $row->titulo;?></th>
-                    <td><?php 
-                      $this->db->where('id', $row->categoria);
-                      $query2 = $this->db->get('categorias');
-                        foreach ($query2->result() as $linha) {
-                          echo $linha->nome;
-                        }
-                      ?>
+                    <td><?php echo $row->categoria;?>
                     </td>
                     <td>
                       <div class="col">
