@@ -31,5 +31,9 @@ class Documentos_model extends CI_Model{
 		$this->db->where('id', $id);
 		return $this->db->update('documentos', $dados);
 	}
-
+	public function listar_dados(){
+		$this->db->order_by('titulo','ASC');
+		$this->db->where('categoria', 4);
+		return $this->db->get('documentos')->result();
+	}
 }
