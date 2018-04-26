@@ -25,12 +25,12 @@
 				<div class="form-group">
 			    <label>Categoria</label>
 				  <select class="browser-default" id="categoria" name="categoria">
-				    <?php
-		                $query = $this->db->get('categorias');
-		                foreach ($query->result() as $row) {
-		                ?>
-					<option value="<?php echo $row->id; ?>"> <?php echo $row->nome;?></option>
-					<?php } ?>
+				    <option value="Pesquisa"> Pesquisa </option>
+				    <option value="Livro"> Livro </option>
+				    <option value="Artigo"> Artigo </option>
+				    <option value="Tese"> Tese/Dissertação </option>
+				    <option value="Dado"> Dado Educacional </option>
+
 				  </select>
 			  	</div>
 
