@@ -36,16 +36,16 @@
 		</div>
 
 		<div class="form-group">
-			<label>Categoria</label>
-			<select class="browser-default" id="categoria" name="categoria" value="<?php echo set_value('categoria', $categoria);?>">
-			<?php
-                $query = $this->db->get('categorias');
-                foreach ($query->result() as $row) {
-                ?>
-			<option value="<?php echo $row->id; ?>"> <?php echo $row->nome;?></option>
-			<?php } ?>
-			</select>
-	 	</div>
+			    <label>Categoria</label>
+				  <select class="browser-default" id="categoria" name="categoria">
+				    <option value="Pesquisa"> Pesquisa </option>
+				    <option value="Livro"> Livro </option>
+				    <option value="Artigo"> Artigo </option>
+				    <option value="Tese"> Tese/Dissertação </option>
+				    <option value="Dado"> Dado Educacional </option>
+
+				  </select>
+			  	</div>
 
 	 	<!--br><div class="form-group">
 			<input type="file" id="file" name="file" class="form-control" value="<?php echo set_value('file', $file) ?>">
