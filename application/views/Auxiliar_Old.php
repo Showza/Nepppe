@@ -2,69 +2,29 @@
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
 <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
 
+<div class="container-fluid">
+  <div class="row">
+    <div class="col" style="color:#ffffff; background-color:#790505; border-color:#790505;">
+      NEPPPE - Página do Auxiliar
+    </div>
+    <div class="col" style="color:#ffffff; background-color:#790505; border-color:#790505;">
+      <a href="<?php echo site_url('evento')?>" class="btn btn-sm navbar-left" style="color:#ffffff;">Cadastrar Evento</a>
+      <a href="<?php echo site_url('midia')?>" class="btn btn-sm navbar-left" style="color:#ffffff;">Cadastrar Mídia</a>
+      <a href="<?php echo site_url('pesquisa')?>" class="btn btn-sm navbar-left" style="color:#ffffff;">Cadastrar Pesquisa</a>
+      <a href="<?php echo site_url('documento')?>" class="btn btn-sm navbar-left" style="color:#ffffff;">Cadastrar Documento</a>
+      <a href="<?php echo site_url('pessoa')?>" class="btn btn-sm navbar-left" style="color:#ffffff;">Cadastrar Pessoa</a>
+      <a href="<?php echo site_url('logout')?>" class="btn btn-sm navbar-left" style="color:#ffffff;">Logout</a>
+    </div>
+  </div>
+</div>
 
-<nav class="navbar navbar-expand-lg navbar-light fixed-top navbar-shrink navbargeral" id="mainNav">
-      <div class="container">
-        <a class="navbar-brand js-scroll-trigger" href="#page-top" style="margin-bottom:37px;">
-          <img src="<?php echo base_url('/assets/frontend/img/logo.png');?>"  class="logo-geral" style="width: 175px;"> 
-        </a>
-     
-        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
-    <span class="navbar-toggler-icon"></span>
-  </button>
-       <div class="collapse navbar-collapse" id="navbarResponsive" style="
-    margin-right:  175px;
-">
-          <ul class="navbar-nav ml-auto" style="float: left;width: 600px;">
-            <li class="rounded nav-item border border-white">
-              <button type="button" class="btn btn-neppe btn-sm btn-block" style="border-bottom-left-radius: 20px;border-top-left-radius: 20px;" >
-              <a class="nav-link js-scroll-trigger" href="<?php echo site_url('evento')?>" style="color: #ffffff;">Cadastrar Evento</a>
-              </button>
-            </li>
-            <li class="rounded nav-item border border-white">
-               <button type="button" class="btn btn-neppe btn-sm btn-block" >
-              <a class="nav-link js-scroll-trigger" href="<?php echo site_url('midia')?>" style="color: #ffffff;">Cadastrar Mídia</a>
-               </button>
-            </li>
-            <li class="rounded nav-item border border-white">
-              <button type="button" class="btn btn-neppe btn-sm btn-block" >
-              <a class="nav-link js-scroll-trigger" href="<?php echo site_url('pesquisa')?>" style="color: #ffffff;">Cadastrar Pesquisa</a>
-               </button>
-            </li>
-            <li class=" rounded nav-item border border-white">
-              <button type="button" class="btn btn-neppe btn-sm btn-block" >
-              <a class="nav-link js-scroll-trigger" href="<?php echo site_url('documento')?>" style="color: #ffffff;">Cadastrar Documento</a>
-              </button>
-            </li>
-            <li class="rounded nav-item border border-white">
-              <button type="button" class="btn btn-neppe btn-sm btn-block">
-              <a class="nav-link js-scroll-trigger" href="<?php echo site_url('pessoa')?>" style="color: #ffffff;">Cadastrar Pessoa</a>
-              </button>
-            </li>
-            <li class="rounded nav-item border border-white">
-              <button type="button" class="btn btn-neppe btn-sm btn-block">
-              <a class="nav-link js-scroll-trigger" href="<?php echo site_url('pdes')?>" style="color: #ffffff;">Cadastrar PDEs</a>
-              </button>
-            </li>
-            <li class="rounded nav-item border border-white">
-              <button type="button" class="btn btn-neppe btn-sm btn-block" style="border-bottom-right-radius: 20px;border-top-right-radius: 20px;" >
-              <a class="nav-link js-scroll-trigger" href="<?php echo site_url('logout')?>" style="color: #ffffff;">Logout</a>
-              </button>
-            </li>
 
-          </ul>
-        </div>
-        
-      </div>
-    </nav>
-    
 <div class="container">
   <h2>Página do Auxiliar</h2>
   <ul class="nav nav-tabs">
     <li class="active"><a data-toggle="tab" href="#eventos" style="color: #ffffff; background-color: #790505; border-color: #790505;">Eventos</a></li>
     <li><a data-toggle="tab" href="#pesquisas" style="color: #ffffff; background-color: #790505; border-color: #790505;">Pesquisas</a></li>
     <li><a data-toggle="tab" href="#documentos" style="color: #ffffff; background-color: #790505; border-color: #790505;">Documentos</a></li>
-    <li><a data-toggle="tab" href="#pdes" style="color: #ffffff; background-color: #790505; border-color: #790505;">PDEs</a></li>
     <li><a data-toggle="tab" href="#midia" style="color: #ffffff; background-color: #790505; border-color: #790505;">Mídia</a></li>
     <li><a data-toggle="tab" href="#pessoas" style="color: #ffffff; background-color: #790505; border-color: #790505;">Pessoas</a></li>
   </ul>
@@ -177,48 +137,6 @@
                     </td>
                     <td>
                       <a class="customlink" title="Arquivo" target="_blank" href="<?php echo base_url('/documentos/'.$row->documento)?>"> <?php echo $row->documento; ?></a>
-                    </td>
-                  </tr><?php } ?>
-                </tbody>
-              </table>
-          </div>
-        </div>
-      </div>
-    </div>
-    <div id="pdes" class="tab-pane fade">
-      <!--Tabela de PDES-->
-      <div class="container-fluid">
-        <div class="row">
-          <div class="col" style="margin-top: 10px; margin-bottom: 10px;">
-            <table class="table table-striped" style="margin-top: 0px">
-                <thead style="color: #ffffff; background-color: #790505; border-color: #790505;">
-                  <tr>
-                    <th scope="col">Nome do Documento</th>
-                    <th>Regiao</th>
-                    <th>Opção</th>
-                    <th>Arquivo</th>
-                    
-                  </tr>
-                </thead>
-                <tbody>
-                  <?php
-                      $query = $this->db->get('documnetos_pde');
-                      foreach ($query->result() as $row) {
-                      ?>
-                  <tr>
-                    <th scope="row"><?php echo $row->nome_pde;?></th>
-                    <td><?php echo $row->estado;?>
-                    </td>
-                    <td>
-                      <div class="col">
-                        <a class="customlink" title="Atualizar evento" href="<?php echo site_url('Documentos/pagina_edicaopde/'.$row->id)?>"><i class="material-icons">Editar</i></a>
-                      </div>
-                      <div class="col">
-                         <a class="customlink" title="Excluir evento" href="<?php echo site_url('Documentos/excluirpde/'.$row->id)?>"><i class="material-icons">Excluir</i></a> 
-                      </div> 
-                    </td>
-                    <td>
-                      <a class="customlink" title="Arquivo" target="_blank" href="<?php echo base_url('/documentos/'.$row->arquivo)?>"> <?php echo $row->arquivo; ?></a>
                     </td>
                   </tr><?php } ?>
                 </tbody>

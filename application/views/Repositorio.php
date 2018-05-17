@@ -5,19 +5,19 @@
   <h2>Repositório</h2>
   <ul class="nav nav-tabs border-bottom-2" role="tablist">
     <li class="nav-item">
-      <a class="nav-link active linkremove " href="#pesquisas" role="tab" data-toggle="tab">Pesquisas</a>
+      <a class="topo-acording nav-link active linkremove " href="#pesquisas" role="tab" data-toggle="tab">Pesquisas</a>
     </li>
     <li class="nav-item">
       
-      <a class="nav-link linkremove" data-toggle="tab" href="#artigos">Artigos</a>
+      <a class="topo-acording nav-link linkremove" data-toggle="tab" href="#artigos">Artigos</a>
     </li>
     <li class="nav-item">
       
-      <a class="nav-link linkremove" data-toggle="tab" href="#livros">Livros</a>
+      <a class="topo-acording nav-link linkremove" data-toggle="tab" href="#livros">Livros</a>
     </li>
     <li class="nav-item">
       
-      <a class="nav-link linkremove" data-toggle="tab" href="#teses">Teses e dissertações</a>
+      <a class="topo-acording nav-link linkremove" data-toggle="tab" href="#teses">Teses e dissertações</a>
     </li>
   </ul>
 
