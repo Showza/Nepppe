@@ -10,10 +10,10 @@
   <h2>Pesquisas</h2>
   <ul class="nav nav-tabs border-bottom-2" role="tablist">
     <li class="nav-item">
-      <a class="nav-link active linkremove " href="#andamento" role="tab" data-toggle="tab">Em andamento</a>
+      <a class="topo-acording nav-link active linkremove " href="#andamento" role="tab" data-toggle="tab">Em andamento</a>
     </li>
     <li class="nav-item">
-      <a class="nav-link linkremove" data-toggle="tab" href="#concluidas">Concluídas</a>
+      <a class="topo-acording nav-link linkremove" data-toggle="tab" href="#concluidas">Concluídas</a>
     </li>
   </ul>
 

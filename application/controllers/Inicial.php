@@ -46,6 +46,7 @@ class Inicial extends CI_Controller {
 	{
 		$this->load->model('documentos_model','model_documentos');
 		$dados['dados'] = $this->model_documentos->listar_dados();
+		$dados['pdes'] = $this->model_documentos->listar_pdes();
 		$this->load->view('Template/Html-header',$dados);
 		$this->load->view('Template/Header');
 		$this->load->view('Basedados');

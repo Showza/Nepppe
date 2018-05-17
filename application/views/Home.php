@@ -11,7 +11,7 @@
           </p>
           <p> 
             O Núcleo conta com pesquisadores da própria Instituição e de outras Universidades, no formato de parcerias interinstitucionais. Além disso, congrega discentes pós-graduandos, graduandos, egressos de graduação e profissionais da educação das redes públicas de 
-            ensino, da região denominadas Inconfidentes. <br>
+            ensino, da região denominada Inconfidentes. <br>
           </p>
           <p>
             O NEPPPE tem por finalidades desenvolver pesquisas em Políticas Públicas de Educação, assim como fomentar estudos relativos a essa área. Ademais, busca-se produzir e difundir conhecimento em torno da temática, estruturar um repositório de pesquisas e trabalhos acerca de Políticas Educacionais e contribuir para a sustentação do Programa de Pós-Graduação em Educação da UFOP.
@@ -25,7 +25,7 @@
           <div class="col-md-4 mb-4">
             <div class="card card-tamanho h-60">
               <div class="card-body">
-                <h5 class="card-title"><center>Nossas pesquisas</center></h5>
+                <h5 class="card-title card-titulo-colorido"><center>Nossas pesquisas</center></h5>
                 <p class="card-text" align="justify">Dedicam-se ao desenvolvimento de pesquisas que investiguem a governança educacional, Nova Gestão Pública e Educação, Permeabilidade estatal nas políticas educacionais, Sociologia Relacional e atores políticos na área educacional e Ciclo de Políticas Públicas de Educação. </p>
               </div>
               <div class="card-footer">
@@ -39,7 +39,7 @@
           <div class="col-md-4 mb-4">
             <div class="card card-tamanho h-60">
               <div class="card-body">
-                <h5 class="card-title"><center>Base de dados</center></h5>
+                <h5 class="card-title card-titulo-colorido"><center>Base de dados</center></h5>
                 <p class="card-text" align="justify">​Censo Escolar-INEP, Indicadores Educacionais-INEP, Medida de Base Governista-Basômetro e Radar Parlamentar, Indicadores Municipais-MUNIC/IBGE, Mapa Organizações da Sociedade Civil-IPEA, CEPIM, Planos Municipais de Educação</p>
               </div>
               <div class="card-footer">
@@ -53,7 +53,7 @@
           <div class="col-md-4 mb-4">
             <div class="card card-tamanho h-60">
               <div class="card-body">
-                <h5 class="card-title"><center>Repositório</center></h5>
+                <h5 class="card-title card-titulo-colorido"><center>Repositório</center></h5>
                 <p class="card-text" align="justify">Artigos, Teses e Dissertações cujas temáticas circunscrevem-se a Nova Gestão Pública, Governança Educacional, Permeabilidade Estatal, Sociologia Relacional, Terceiro Setor e Educação.</p>
               </div>
               <div class="card-footer">
@@ -113,10 +113,23 @@
                 <?php 
                     $cont=1; 
                     }else{
+                    	$aleatorio=0;
+                    	$aleatorio = rand(1, 5);
+
                 ?>    
                         <div class="carousel-item boxer">
 
-                    <img class="d-block imgcarrousel" src="http://www.ufop.br/sites/default/files/styles/topo_da_not_cia/public/ichs.png?itok=LzYvatsY" alt="Imagem">
+                    <?php if($aleatorio == 1){  ?>
+                    <img class="d-block imgcarrousel" src="<?php echo base_url('/assets/frontend/img/eventos/evento_1.jpg') ?>" alt="Imagem">
+                    <?php }else if($aleatorio == 2){  ?>
+                    <img class="d-block imgcarrousel" src="<?php echo base_url('/assets/frontend/img/eventos/evento_2.jpg') ?>" alt="Imagem">
+                    <?php }else if($aleatorio == 3){  ?>
+                    <img class="d-block imgcarrousel" src="<?php echo base_url('/assets/frontend/img/eventos/evento_3.jpg') ?>" alt="Imagem">
+                    <?php }else if($aleatorio == 4){  ?>
+                    <img class="d-block imgcarrousel" src="<?php echo base_url('/assets/frontend/img/eventos/evento_4.jpg') ?>" alt="Imagem">
+                    <?php }else if($aleatorio == 5){  ?>
+                    <img class="d-block imgcarrousel" src="<?php echo base_url('/assets/frontend/img/eventos/evento_5.jpg') ?>" alt="Imagem">
+                    <?php } ?>
                     <div class="grupo">
                         <div class="conteudo">
                               <h4><?php echo $evento->titulo; ?></h4>
@@ -189,9 +202,6 @@
                 </li>
                 <li class="list-group-item-neppe d-flex justify-content-between align-items-center">REIPPE
                     <a href="https://redereippe.wixsite.com/reippe"><span class="btn btn-neppe badge-pill">Acessar</span></a>
-                </li>
-                <li class="list-group-item-neppe d-flex justify-content-between align-items-center">Radar Parlamentar
-                    <a href="http://radarparlamentar.polignu.org/"><span class="btn btn-neppe badge-pill">Acessar</span></a>
                 </li>
                 <li class="list-group-item-neppe d-flex justify-content-between align-items-center">Programa de Pós-Graduação em Educação da UFOP
                     <a href="http://posedu.ufop.br/"><span class="btn btn-neppe badge-pill">Acessar</span></a>
