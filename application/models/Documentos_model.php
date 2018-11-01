@@ -21,7 +21,7 @@ class Documentos_model extends CI_Model{
 		$dados['estado']= $regiao;
 		$dados['arquivo']= $new_name;
 
-		return $this->db->insert('documnetos_pde', $dados);
+		return $this->db->insert('documentos_pde', $dados);
 	}
 
 	public function excluir($id){
@@ -30,7 +30,7 @@ class Documentos_model extends CI_Model{
 	}
 	public function excluirpde($id){
 		$this->db->where('id', $id);
-		return $this->db->delete('documnetos_pde');
+		return $this->db->delete('documentos_pde');
 	}
 
 	public function atualizar($titulo, $resumo, $conteudo, $categoria, $id){
@@ -46,9 +46,9 @@ class Documentos_model extends CI_Model{
 		$dados['estado']= $regiao;
 		$dados['arquivo']= $new_name;
 		$this->db->where('id', $id);
-		return $this->db->update('documnetos_pde', $dados);
+		return $this->db->update('documentos_pde', $dados);
 	}
-	
+
 	public function listar_dados(){
 		$this->db->order_by('titulo','ASC');
 		$this->db->where('categoria', 'Dado');
@@ -57,6 +57,6 @@ class Documentos_model extends CI_Model{
 
 	public function listar_pdes(){
 		$this->db->order_by('nome_pde','ASC');
-		return $this->db->get('documnetos_pde')->result();
+		return $this->db->get('documentos_pde')->result();
 	}
 }
