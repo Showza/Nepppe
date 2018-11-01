@@ -1,12 +1,12 @@
 <!--<nav class="navbar navbar-expand-lg navbar-light fixed-top navbar-shrink" id="mainNav" style ="background-color: #790505;">
       <div class="container">
-        <a class="navbar-brand js-scroll-trigger" href="#page-top"> <font color="white"> 
+        <a class="navbar-brand js-scroll-trigger" href="#page-top"> <font color="white">
           <img src="<?php echo base_url('/assets/frontend/img/logotexto.png');?>" width= 20% class="img-fluid"> &nbsp Núcleo de Estudos e Pesquisas em Políticas Públicas de Educação
         </font></a>
         <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
           <span class="navbar-toggler-icon"></span>
         </button>
-        
+
         <div class="collapse navbar-collapse" id="navbarResponsive">
           <ul class="navbar-nav ml-auto">
             <li class="nav-item">
@@ -43,9 +43,9 @@
 <nav class="navbar navbar-expand-lg navbar-light fixed-top navbar-shrink navbargeral" id="mainNav">
       <div class="container">
         <a class="navbar-brand js-scroll-trigger" href="#page-top">
-          <img src="<?php echo base_url('/assets/frontend/img/logotexto.png');?>"  class="logo-geral"> 
+          <img src="<?php echo base_url('/assets/frontend/img/logotexto.png');?>"  class="logo-geral">
         </a>
-     
+
         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
     <span class="navbar-toggler-icon"></span>
   </button>
@@ -79,10 +79,10 @@
 
           </ul>
         </div>
-        
+
       </div>
     </nav>
-    
+
 
 
 <br><br><br><br>
