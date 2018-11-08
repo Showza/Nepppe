@@ -7,7 +7,7 @@ class Usuarios extends CI_Controller {
 		parent::__construct();
 		$this->load->model('usuarios_model', 'modelusuarios');
 	}
-	
+
 	public function index()
 	{
 		$this->load->view('Template/Html-header');
@@ -52,7 +52,7 @@ class Usuarios extends CI_Controller {
 				$this->session->set_userdata($dadosSessao);
 				if($this->session->userdata('userlogado')->tipo == "Administrador"){
 					redirect(site_url('Usuarios/administrador'));
-				} 
+				}
 				else {
 					redirect(site_url('Usuarios/auxiliar'));
 				}
@@ -91,7 +91,7 @@ class Usuarios extends CI_Controller {
 				$this->load->view('Template/Html-footer');
 		}else{
 			echo "Você não tem permissão para acessar essa página!";
-		}	
+		}
 	}
 
 	public function editar_dados($id){
@@ -102,7 +102,7 @@ class Usuarios extends CI_Controller {
 				$this->load->view('Template/Html-footer');
 		}else{
 			echo "Você não tem permissão para acessar essa página!";
-		}	
+		}
 	}
 
 	public function inserir(){
@@ -116,7 +116,7 @@ class Usuarios extends CI_Controller {
 		if($this->form_validation->run() == FALSE){
 			$this->pagina_cadastro();
 		}else{
-						
+
 			$nome= $this->input->post('txt-nome');
 			$email= $this->input->post('txt-email');
 			$senha= $this->input->post('txt-senha');
@@ -134,7 +134,7 @@ class Usuarios extends CI_Controller {
 
 	public function atualizar_dados($id){
 		$this->load->library('form_validation');
-		
+
 		$this->form_validation->set_rules('txt-senha', 'Senha', 'min_length[3]'); #senha
 		$this->form_validation->set_rules('txt-confirmasenha', 'Confirmar senha', 'matches[txt-senha]'); #senha
 		if($this->form_validation->run() == FALSE){
@@ -142,9 +142,9 @@ class Usuarios extends CI_Controller {
 		}else{
 			$nome= $this->input->post('txt-nome');
 			$email= $this->input->post('txt-email');
-			$senha= base64_encode($this->input->post('txt-senha'));			
+			$senha= base64_encode($this->input->post('txt-senha'));
 			$cpf= $this->input->post('txt-cpf');
-					
+
 			if ($this->modelusuarios->atualizar($nome, $email, $senha, $id, $cpf)){
 				redirect(site_url('administrador'));
 			}else{

@@ -25,9 +25,8 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 */
 // Para rodar localhost use:
 $config['base_url'] = 'http://localhost/Nepppe';
-
-/*Para rodar no servidor web use: */
-// $config['base_url'] = 'http://nepppe.ufop.br';
+// /*Para rodar no servidor web use: */
+// $config['base_url'] = 'https://nepppe.ufop.br';
 
 /*
 |--------------------------------------------------------------------------

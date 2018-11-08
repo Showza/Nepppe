@@ -7,12 +7,12 @@
 <div class="container">
     <?php
       $this->db->where('id', $id);
-      $query = $this->db->get('documnetos_pde');
+      $query = $this->db->get('documentos_pde');
           foreach ($query->result() as $row) {
             $titulo = $row->nome_pde;
             $regiao = $row->estado;
-            $documento = $row->arquivo;        
-            
+            $documento = $row->arquivo;
+
           }
       ?>
     
@@ -22,11 +22,11 @@
 		echo form_open('Documentos/atualizar_pde/'.$id);
 	?>
 
-		
+
 
 				<div class="form-group">
 					<input type="text" id="txt-nome-doc" name="txt-nome-doc" class="form-control" placeholder="Nome do documento" value="<?php echo set_value('txt-nome-doc',$titulo) ?>" autofocus>
-				</div>		
+				</div>
 
 			  	<div class="form-group">
 				  <label for="sel1">Região:</label>
