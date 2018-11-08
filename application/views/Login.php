@@ -6,7 +6,7 @@
               <h4>Faça login no sistema</h4><br>
             </header>
                 <div class="templatemo-login-form">
-                    <?php  
+                    <?php
                         echo validation_errors('<div class="alert alert-danger">','</div>');
                         echo form_open('Usuarios/login');
 
@@ -23,6 +23,7 @@
                         <button class="btn btn-lg btn-success btn-block" style="color: #ffffff; background-color: #790505; border-color: #790505; margin-top: 30px;">Entrar</button>
                     </fieldset>
                     <?php echo form_close();?>
+					<a href="<?php echo site_url(); ?>"> Voltar ao site </a>
                 </div>
         </div>
     </div>
