@@ -6,9 +6,9 @@
 <nav class="navbar navbar-expand-lg navbar-light fixed-top navbar-shrink navbargeral" id="mainNav">
       <div class="container">
         <a class="navbar-brand js-scroll-trigger" href="#page-top" style="margin-bottom:37px;">
-          <img src="<?php echo base_url('/assets/frontend/img/logo.png');?>"  class="logo-geral" style="width: 175px;"> 
+          <img src="<?php echo base_url('/assets/frontend/img/logo.png');?>"  class="logo-geral" style="width: 175px;">
         </a>
-     
+
         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
     <span class="navbar-toggler-icon"></span>
   </button>
@@ -54,10 +54,10 @@
 
           </ul>
         </div>
-        
+
       </div>
     </nav>
-    
+
 <div class="container">
   <h2>Página do Auxiliar</h2>
   <ul class="nav nav-tabs">
@@ -93,11 +93,11 @@
                     <td><a class="customlink" href="<?php echo $row->link ?>" target="_blank">Link</a></td>
                     <td>
                       <div class="col">
-                        <a class="customlink" title="Atualizar evento" href="<?php echo site_url('Eventos/pagina_edicao/'.$row->id)?>"><i class="material-icons">Editar</i></a> 
+                        <a class="customlink" title="Atualizar evento" href="<?php echo site_url('Eventos/pagina_edicao/'.$row->id)?>"><i class="material-icons">Editar</i></a>
                       </div>
                       <div class="col">
-                        <a class="customlink" title="Excluir evento" href="<?php echo site_url('Eventos/excluir/'.$row->id)?>"><i class="material-icons">Excluir</i></a>      
-                      </div> 
+                        <a class="customlink" title="Excluir evento" href="<?php echo site_url('Eventos/excluir/'.$row->id)?>"><i class="material-icons">Excluir</i></a>
+                      </div>
                     </td>
                   </tr><?php } ?>
                 </tbody>
@@ -117,7 +117,7 @@
                     <th scope="col">Título</th>
                     <th>Tipo</th>
                     <th>Opção</th>
-                    
+
                   </tr>
                 </thead>
                 <tbody>
@@ -130,10 +130,10 @@
                     <td><?php echo $row->tipo;?></td>
                     <td>
                       <div class="col">
-                        <a class="customlink" title="Atualizar evento" href="<?php echo site_url('Pesquisas/pagina_edicao/'.$row->id)?>"><i class="material-icons">Editar</i></a> 
+                        <a class="customlink" title="Atualizar evento" href="<?php echo site_url('Pesquisas/pagina_edicao/'.$row->id)?>"><i class="material-icons">Editar</i></a>
                       </div>
                       <div class="col">
-                        <a class="customlink" title="Excluir evento" href="<?php echo site_url('Pesquisas/excluir/'.$row->id)?>"><i class="material-icons">Excluir</i></a>      
+                        <a class="customlink" title="Excluir evento" href="<?php echo site_url('Pesquisas/excluir/'.$row->id)?>"><i class="material-icons">Excluir</i></a>
                       </div>
                     </td>
                   </tr><?php } ?>
@@ -155,7 +155,7 @@
                     <th>Categoria</th>
                     <th>Opção</th>
                     <th>Arquivo</th>
-                    
+
                   </tr>
                 </thead>
                 <tbody>
@@ -172,8 +172,8 @@
                         <a class="customlink" title="Atualizar evento" href="<?php echo site_url('Documentos/pagina_edicao/'.$row->id)?>"><i class="material-icons">Editar</i></a>
                       </div>
                       <div class="col">
-                         <a class="customlink" title="Excluir evento" href="<?php echo site_url('Documentos/excluir/'.$row->id)?>"><i class="material-icons">Excluir</i></a> 
-                      </div> 
+                         <a class="customlink" title="Excluir evento" href="<?php echo site_url('Documentos/excluir/'.$row->id)?>"><i class="material-icons">Excluir</i></a>
+                      </div>
                     </td>
                     <td>
                       <a class="customlink" title="Arquivo" target="_blank" href="<?php echo base_url('/documentos/'.$row->documento)?>"> <?php echo $row->documento; ?></a>
@@ -197,12 +197,12 @@
                     <th>Regiao</th>
                     <th>Opção</th>
                     <th>Arquivo</th>
-                    
+
                   </tr>
                 </thead>
                 <tbody>
                   <?php
-                      $query = $this->db->get('documnetos_pde');
+                      $query = $this->db->get('documentos_pde');
                       foreach ($query->result() as $row) {
                       ?>
                   <tr>
@@ -214,8 +214,8 @@
                         <a class="customlink" title="Atualizar evento" href="<?php echo site_url('Documentos/pagina_edicaopde/'.$row->id)?>"><i class="material-icons">Editar</i></a>
                       </div>
                       <div class="col">
-                         <a class="customlink" title="Excluir evento" href="<?php echo site_url('Documentos/excluirpde/'.$row->id)?>"><i class="material-icons">Excluir</i></a> 
-                      </div> 
+                         <a class="customlink" title="Excluir evento" href="<?php echo site_url('Documentos/excluirpde/'.$row->id)?>"><i class="material-icons">Excluir</i></a>
+                      </div>
                     </td>
                     <td>
                       <a class="customlink" title="Arquivo" target="_blank" href="<?php echo base_url('/documentos/'.$row->arquivo)?>"> <?php echo $row->arquivo; ?></a>
@@ -249,11 +249,11 @@
                     <td><a class="customlink" href="<?php echo $row->link ?>" target="_blank">Link</a></td>
                     <td>
                       <div class="col">
-                        <a class="customlink" title="Atualizar evento" href="<?php echo site_url('Midias/pagina_edicao/'.$row->id)?>">Editar</a> 
+                        <a class="customlink" title="Atualizar evento" href="<?php echo site_url('Midias/pagina_edicao/'.$row->id)?>">Editar</a>
                       </div>
                       <div class="col">
-                        <a class="customlink" title="Excluir evento" href="<?php echo site_url('Midias/excluir/'.$row->id)?>"><i class="material-icons">Excluir</i></a>      
-                      </div> 
+                        <a class="customlink" title="Excluir evento" href="<?php echo site_url('Midias/excluir/'.$row->id)?>"><i class="material-icons">Excluir</i></a>
+                      </div>
                     </td>
                   </tr><?php } ?>
                 </tbody>
@@ -288,11 +288,11 @@
                     <td><a class="customlink" href="<?php echo $row->curriculo; ?>" target="_blank">Currículo Lattes</a></td>
                     <td>
                       <div class="col">
-                        <a class="customlink" title="Atualizar dados da pessoa" href="<?php echo site_url('Pessoas/pagina_edicao/'.$row->id)?>">Editar</a> 
+                        <a class="customlink" title="Atualizar dados da pessoa" href="<?php echo site_url('Pessoas/pagina_edicao/'.$row->id)?>">Editar</a>
                       </div>
                       <div class="col">
-                        <a class="customlink" title="Excluir dados da pessoa" href="<?php echo site_url('Pessoas/excluir/'.$row->id)?>"><i class="material-icons">Excluir</i></a>      
-                      </div> 
+                        <a class="customlink" title="Excluir dados da pessoa" href="<?php echo site_url('Pessoas/excluir/'.$row->id)?>"><i class="material-icons">Excluir</i></a>
+                      </div>
                     </td>
                   </tr><?php } ?>
                 </tbody>
@@ -323,7 +323,7 @@
               <th>Resumo</th>
               <th>Data</th>
               <th>Opção</th>
-              
+
             </tr>
           </thead>
           <tbody>
@@ -336,8 +336,8 @@
               <td><?php echo $row->resumo;?></td>
               <td><?php echo $row->data;?> </td>
               <td>
-                <a class="customlink" title="Excluir evento" href="<?php echo site_url('Eventos/excluir/'.$row->id)?>"><i class="material-icons">delete</i></a>          
-                <a class="customlink" title="Atualizar evento" href="<?php echo site_url('Eventos/pagina_edicao/'.$row->id)?>"><i class="material-icons">create</i></a> 
+                <a class="customlink" title="Excluir evento" href="<?php echo site_url('Eventos/excluir/'.$row->id)?>"><i class="material-icons">delete</i></a>
+                <a class="customlink" title="Atualizar evento" href="<?php echo site_url('Eventos/pagina_edicao/'.$row->id)?>"><i class="material-icons">create</i></a>
               </td>
             </tr><?php } ?>
           </tbody>
@@ -353,7 +353,7 @@
               <th scope="col">Título</th>
               <th>Tipo</th>
               <th>Opção</th>
-              
+
             </tr>
           </thead>
           <tbody>
@@ -365,8 +365,8 @@
               <th scope="row"><?php echo $row->titulo;?></th>
               <td><?php echo $row->tipo;?></td>
               <td>
-                <a class="customlink" title="Excluir evento" href="<?php echo site_url('Pesquisas/excluir/'.$row->id)?>"><i class="material-icons">delete</i></a>          
-                <a class="customlink" title="Atualizar evento" href="<?php echo site_url('Pesquisas/pagina_edicao/'.$row->id)?>"><i class="material-icons">create</i></a> 
+                <a class="customlink" title="Excluir evento" href="<?php echo site_url('Pesquisas/excluir/'.$row->id)?>"><i class="material-icons">delete</i></a>
+                <a class="customlink" title="Atualizar evento" href="<?php echo site_url('Pesquisas/pagina_edicao/'.$row->id)?>"><i class="material-icons">create</i></a>
               </td>
             </tr><?php } ?>
           </tbody>

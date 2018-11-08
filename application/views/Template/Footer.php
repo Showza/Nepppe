@@ -22,6 +22,9 @@
                 </div>
                 <div class="col-sm-3" align="left">
                     <img src="<?php echo base_url('/assets/frontend/img/ichs.png');?>" width= 70% class="img-fluid" style="margin-top: 5px; margin-bottom: 5px;">
+                    <button type="button" class="btn btn-neppe btn-sm btn-block">
+                        <a class="nav-link js-scroll-trigger" href="<?php echo site_url('login')?>" style="color: #ffffff;">Painel Administrativo</a>
+               </button>
                 </div>
             </div>
             <div class="col-sm-12" style="color:#ffffff;">
