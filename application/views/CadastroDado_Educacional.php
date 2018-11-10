@@ -7,7 +7,7 @@
 			<div class="templatemo-login-form">
 				<?php
 					echo validation_errors('<div class="alert alert-danger">', '</div>');
-					echo form_open_multipart('Documentos/cadastrar');
+					echo form_open_multipart('Documentos/cadastrardadoedu');
 					?>
 
 
@@ -23,17 +23,7 @@
 				</div>
 
 				<div class="form-group">
-			    <label>Categoria</label>
-				  <select class="browser-default" id="categoria" name="categoria">
-				    <option value="Pesquisa"> Pesquisa </option>
-				    <option value="Livro"> Livro </option>
-				    <option value="Artigo"> Artigo </option>
-				    <option value="Teses"> Tese/Dissertação </option>
-				  </select>
-			  	</div>
-
-			  	<br><div class="form-group">
-					<input type="file" name="arquivo" id="arquivo"/>
+					<input type="text" id="txt-link" name="txt-link" class="form-control" placeholder="Link para o dado" value="<?php echo set_value('txt-link') ?>">
 				</div>
 
 				<br><br><input type="submit" class="btn btn-lg btn-success btn-block" style="color: #ffffff; background-color: #790505; border-color: #790505;margin-bottom: 30px" value="Cadastrar" />

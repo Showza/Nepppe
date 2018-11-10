@@ -22,10 +22,11 @@
   </ul>
   <div class="tab-content">
     <div role="tabpanel" class="tab-pane active" id="dadoeducacional" >
+
       <div id="accordion">
-        <?php
-          foreach ($dados as $dado){
-          ?>
+		  <?php
+            foreach ($dados as $dado){
+            ?>
         <div class="card">
           <div class="card-header" id="headingOne">
               <h5 class="mb-0">
@@ -40,14 +41,18 @@
               <?php echo $dado->resumo;?>
               <h5>Conteúdo </h5>
               <p class="lead"> <?php echo $dado->conteudo; ?>
-                <p>Link para o arquivo: <a class="customlink" title="Arquivo" target="_blank" href="<?php echo base_url('/documentos/'.$dado->documento)?>"> <?php echo $dado->documento; ?></a></p>
+                <p>Link para o arquivo: <a class="customlink" title="Arquivo" target="_blank" href="<?php echo $dado->link;?>"> <?php echo $dado->link; ?></a></p>
               </p>
             </div>
-          </div>        
+
+          </div>
+
        </div>
-       <?php } ?>
+<?php } ?>
       </div>
+
     </div>
+
 <!--
 Começar a Segunda Aba
 -->
@@ -56,10 +61,9 @@ Começar a Segunda Aba
 	<?php
 		$estados = array(
 			"Acre","Alagoas","Amapá","Amazonas","Bahia","Ceará","Distrito Federal","Espirito Sato","Goiás","Maranhão",
-			"Mato Grosso","Mato Grosso do Sul","Minas Gerais","Pará","Paraíba","Paraná","Pernambuco","Piauí",
-			"Rio de Janeiro","Rio Grande do Norte","Rio Grande do Sul","Rondônia","Roraima","Santa Catarina",
-			"São Paulo","Sergipe","Tocantins",
-		)
+			"Mato Grosso","Mato Grosso do Sul","Minas Gerais","Pará","Paraíba","Paraná","Pernambuco","Piauí","Rio de Janeiro",
+			"Rio Grande do Norte","Rio Grande do Sul","Rondônia","Roraima","Santa Catarina","São Paulo","Sergipe","Tocantins",
+		);
 	 	$legenda = array(
 			"AC","AL","AP","AM","BA","CE","DF","ES","GO","MA","MT","MS","MG","PA","PB","PR","PE","PI","RJ","RN","RS",
 			"RO","RR","SC","SP","SE","TO",
@@ -68,15 +72,15 @@ Começar a Segunda Aba
 			<div class="card">
 	          <div class="card-header" id="headingOne">
 	              <h5 class="mb-0">
-	                <button class="btn btn-link" style="text-decoration: none;color:black;" data-toggle="collapse" data-target="#<?php echo $i+1 ?>" aria-expanded="true" aria-controls="1">
+	                <button class="btn btn-link" style="text-decoration: none;color:black;" data-toggle="collapse" data-target="#Est<?php echo $i+1 ?>" aria-expanded="true" aria-controls="1">
 	                       <?php echo $legenda[$i] ?>
 	                </button>
 	              </h5>
 	          </div>
 
-	          <div id="<?php echo $i+1 ?>" class="collapse" aria-labelledby="<?php echo $i+1 ?>" data-parent="#accordion">
+	          <div id="Est<?php echo $i+1 ?>" class="collapse" aria-labelledby="<?php echo $i+1 ?>" data-parent="#accordion">
 	            <div class="card-body">
-	              <h5>Relação de Documentos PDEs do <?php echo $estados[$i]; ?></h5>
+	              <h5>Relação de Documentos PDEs do estado <?php echo $estados[$i]; ?></h5>
 	               <?php
 	                  foreach ($pdes as $pdes_regiao){
 	                    if ($pdes_regiao->estado == $legenda[$i]){
@@ -91,9 +95,10 @@ Começar a Segunda Aba
 	          </div>
 
 	       </div>
-	   <?php } ?>
+	  <?php } ?>
 
       </div>
+
     </div>
   </div>
 

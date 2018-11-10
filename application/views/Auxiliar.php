@@ -36,6 +36,11 @@
               <a class="nav-link js-scroll-trigger" href="<?php echo site_url('documento')?>" style="color: #ffffff;">Cadastrar Documento</a>
               </button>
             </li>
+			<li class="rounded nav-item border border-white">
+              <button type="button" class="btn btn-neppe btn-sm btn-block">
+              <a class="nav-link js-scroll-trigger" href="<?php echo site_url('dadoedu')?>" style="color: #ffffff;">Cadastrar Dado Educacional</a>
+              </button>
+            </li>
             <li class="rounded nav-item border border-white">
               <button type="button" class="btn btn-neppe btn-sm btn-block">
               <a class="nav-link js-scroll-trigger" href="<?php echo site_url('pessoa')?>" style="color: #ffffff;">Cadastrar Pessoa</a>
@@ -64,6 +69,7 @@
     <li class="active"><a data-toggle="tab" href="#eventos" style="color: #ffffff; background-color: #790505; border-color: #790505;">Eventos</a></li>
     <li><a data-toggle="tab" href="#pesquisas" style="color: #ffffff; background-color: #790505; border-color: #790505;">Pesquisas</a></li>
     <li><a data-toggle="tab" href="#documentos" style="color: #ffffff; background-color: #790505; border-color: #790505;">Documentos</a></li>
+	<li><a data-toggle="tab" href="#dadosedu" style="color: #ffffff; background-color: #790505; border-color: #790505;">Dados Educacionais</a></li>
     <li><a data-toggle="tab" href="#pdes" style="color: #ffffff; background-color: #790505; border-color: #790505;">PDEs</a></li>
     <li><a data-toggle="tab" href="#midia" style="color: #ffffff; background-color: #790505; border-color: #790505;">Mídia</a></li>
     <li><a data-toggle="tab" href="#pessoas" style="color: #ffffff; background-color: #790505; border-color: #790505;">Pessoas</a></li>
@@ -172,11 +178,46 @@
                         <a class="customlink" title="Atualizar evento" href="<?php echo site_url('Documentos/pagina_edicao/'.$row->id)?>"><i class="material-icons">Editar</i></a>
                       </div>
                       <div class="col">
-                         <a class="customlink" title="Excluir evento" href="<?php echo site_url('Documentos/excluir/'.$row->id)?>"><i class="material-icons">Excluir</i></a>
+                         <a class="customlink" title="Excluir evento" href="<?php echo site_url('Documentos/excluir/'.$row->id."/".$row->documento)?>"><i class="material-icons">Excluir</i></a>
                       </div>
                     </td>
                     <td>
                       <a class="customlink" title="Arquivo" target="_blank" href="<?php echo base_url('/documentos/'.$row->documento)?>"> <?php echo $row->documento; ?></a>
+                    </td>
+                  </tr><?php } ?>
+                </tbody>
+              </table>
+          </div>
+        </div>
+      </div>
+    </div>
+	<div id="dadosedu" class="tab-pane fade">
+      <div class="container-fluid">
+        <div class="row">
+          <div class="col" style="margin-top: 10px; margin-bottom: 10px;">
+            <table class="table table-striped" style="margin-top: 0px">
+                <thead style="color: #ffffff; background-color: #790505; border-color: #790505;">
+                  <tr>
+                    <th scope="col">Título</th>
+                    <th>Link</th>
+                    <th>Opção</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <?php
+                      $query = $this->db->get('dadosedu');
+                      foreach ($query->result() as $row) {
+                      ?>
+                  <tr>
+                    <th scope="row"><?php echo $row->titulo;?></th>
+                    <td><a class="customlink" href="<?php echo $row->link ?>" target="_blank">Link</a></td>
+                    <td>
+                      <div class="col">
+                        <a class="customlink" title="Atualizar dado" href="<?php echo site_url('Documentos/pagina_edicaodadoedu/'.$row->id)?>">Editar</a>
+                      </div>
+                      <div class="col">
+                        <a class="customlink" title="Excluir dado" href="<?php echo site_url('Documentos/excluirdadoedu/'.$row->id)?>"><i class="material-icons">Excluir</i></a>
+                      </div>
                     </td>
                   </tr><?php } ?>
                 </tbody>
