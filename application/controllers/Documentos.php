@@ -7,6 +7,11 @@ class Documentos extends CI_Controller {
 		parent::__construct();
 		$this->load->model('documentos_model', 'modeldocumentos');
 		 $this->load->helper(array('form', 'url'));
+
+		 ini_set('upload_max_filesize', '200M');
+ini_set('post_max_size', '200M');                               
+ini_set('max_input_time', 30000);                                
+ini_set('max_execution_time', 30000);
 	}
 	
 	public function excluir($id){
@@ -65,7 +70,7 @@ class Documentos extends CI_Controller {
 		$configuracao = array(
          'upload_path'   => './documentos/',
          'allowed_types' => 'pdf|zip|rar|doc|docx|odc|txt|csv',
-         'file_name'     => $documento,
+         'file_name'     => $new_name,
          //'max_size'      => 100;
          //'max_width'     => 1024;
          //'max_height'    => 768;
@@ -104,7 +109,7 @@ class Documentos extends CI_Controller {
          'upload_path'   => './documentos/',
          'allowed_types' => 'pdf|zip|rar|doc|docx|odc|txt|csv',
          'file_name'     => $documento,
-         //'max_size'      => 100;
+         //'max_size'      => 10000000,
          //'max_width'     => 1024;
          //'max_height'    => 768;
         );   
