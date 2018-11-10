@@ -43,12 +43,11 @@
                 <p>Link para o arquivo: <a class="customlink" title="Arquivo" target="_blank" href="<?php echo base_url('/documentos/'.$dado->documento)?>"> <?php echo $dado->documento; ?></a></p>
               </p>
             </div>
-          </div>
-        <?php } ?>
+          </div>        
        </div>
+       <?php } ?>
       </div>
     </div>
-
 <!--
 Começar a Segunda Aba
 -->
