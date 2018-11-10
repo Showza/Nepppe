@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: 01-Nov-2018 às 02:05
+-- Generation Time: 10-Nov-2018 às 15:12
 -- Versão do servidor: 10.1.31-MariaDB
 -- PHP Version: 7.2.3
 
@@ -41,8 +41,21 @@ INSERT INTO `categorias` (`id`, `nome`) VALUES
 (1, 'Pesquisa'),
 (2, 'Artigo'),
 (3, 'Livro'),
-(5, 'Tese/Dissertação'),
-(4, 'Dado Educacional');
+(5, 'Teses');
+
+-- --------------------------------------------------------
+
+--
+-- Estrutura da tabela `dadosedu`
+--
+
+CREATE TABLE `dadosedu` (
+  `id` int(11) NOT NULL,
+  `titulo` varchar(255) NOT NULL,
+  `resumo` text NOT NULL,
+  `conteudo` text NOT NULL,
+  `link` varchar(255) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 -- --------------------------------------------------------
 
@@ -52,23 +65,12 @@ INSERT INTO `categorias` (`id`, `nome`) VALUES
 
 CREATE TABLE `documentos` (
   `id` int(11) NOT NULL,
-  `titulo` varchar(30) NOT NULL,
-  `resumo` varchar(200) NOT NULL,
-  `conteudo` varchar(200) NOT NULL,
+  `titulo` varchar(255) NOT NULL,
+  `resumo` text NOT NULL,
+  `conteudo` text NOT NULL,
   `categoria` varchar(20) NOT NULL,
-  `documento` varchar(200) NOT NULL
-) ENGINE=MyISAM DEFAULT CHARSET=latin1;
-
---
--- Extraindo dados da tabela `documentos`
---
-
-INSERT INTO `documentos` (`id`, `titulo`, `resumo`, `conteudo`, `categoria`, `documento`) VALUES
-(31, 'Título da pesquisa', 'Resumo do dado', 'Conteúdo do dado', 'Pesquisa', ''),
-(32, 'Título do dado2', 'Resumo do dado', 'Conteúdo do dado', 'Livro', 'teste\r\n'),
-(33, 'Título do dado3', 'Resumo do dado', 'Conteúdo do dado', 'Artigo', 'teste3\r\n\r\n'),
-(34, 'Título do Dado', 'Resumo do dado', 'Conteúdo do dado', 'Dado', 'teste4'),
-(35, 'Titulo do Tese', 'lalalalr resumo', 'conteudo da teseseee', 'Teses', 'doc');
+  `documento` varchar(255) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 -- --------------------------------------------------------
 
@@ -224,6 +226,18 @@ ALTER TABLE `categorias`
   ADD PRIMARY KEY (`id`);
 
 --
+-- Indexes for table `dadosedu`
+--
+ALTER TABLE `dadosedu`
+  ADD PRIMARY KEY (`id`);
+
+--
+-- Indexes for table `documentos`
+--
+ALTER TABLE `documentos`
+  ADD PRIMARY KEY (`id`);
+
+--
 -- Indexes for table `documentos_pde`
 --
 ALTER TABLE `documentos_pde`
@@ -269,6 +283,18 @@ ALTER TABLE `usuarios`
 --
 ALTER TABLE `categorias`
   MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=7;
+
+--
+-- AUTO_INCREMENT for table `dadosedu`
+--
+ALTER TABLE `dadosedu`
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
+
+--
+-- AUTO_INCREMENT for table `documentos`
+--
+ALTER TABLE `documentos`
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=6;
 
 --
 -- AUTO_INCREMENT for table `documentos_pde`

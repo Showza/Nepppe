@@ -84,7 +84,7 @@ ini_set('max_execution_time', 30000);
 		$arquivo= $_FILES['arquivo'];
 
 		$original_name = $_FILES['arquivo']['name'];
-        $new_name = ''.strtr(utf8_decode($original_name), utf8_decode(' àáâãäçèéêëìíîïñòóôõöùúûüýÿÀÁÂÃÄÇÈÉÊËÌÍÎÏÑÒÓÔÕÖÙÚÛÜÝ()'), '_aaaaaceeeeiiiinooooouuuuyyAAAAACEEEEIIIINOOOOOUUUUY__');
+        $new_name = ''.strtr(utf8_decode($original_name), utf8_decode(' àáâãäçèéêëìíîïñòóôõöùúûüýÿÀÁÂÃÄÇÈÉÊËÌÍÎÏÑÒÓÔÕÖÙÚÛÜÝ()[]{}'), '_aaaaaceeeeiiiinooooouuuuyyAAAAACEEEEIIIINOOOOOUUUUY______');
         $path = 'assets/frontend/documentos/eventos/'.'/'.$new_name;
 
 		$configuracao = array(
@@ -123,7 +123,7 @@ ini_set('max_execution_time', 30000);
 		$arquivo= $_FILES['arquivo'];
 
 		$original_name = $_FILES['arquivo']['name'];
-        $new_name = ''.strtr(utf8_decode($original_name), utf8_decode(' àáâãäçèéêëìíîïñòóôõöùúûüýÿÀÁÂÃÄÇÈÉÊËÌÍÎÏÑÒÓÔÕÖÙÚÛÜÝ'), '_aaaaaceeeeiiiinooooouuuuyyAAAAACEEEEIIIINOOOOOUUUUY');
+        $new_name = ''.strtr(utf8_decode($original_name), utf8_decode(' àáâãäçèéêëìíîïñòóôõöùúûüýÿÀÁÂÃÄÇÈÉÊËÌÍÎÏÑÒÓÔÕÖÙÚÛÜÝ()[]{}'), '_aaaaaceeeeiiiinooooouuuuyyAAAAACEEEEIIIINOOOOOUUUUY______');
         $path = 'assets/frontend/documentos/eventos/'.'/'.$new_name;
 		$configuracao = array(
          'upload_path'   => './documentos/',
@@ -209,7 +209,7 @@ ini_set('max_execution_time', 30000);
 			$regiao= filter_input(INPUT_POST,"regiao",FILTER_SANITIZE_STRING);
 			$arquivo= $_FILES['arquivo'];
 			$original_name = $_FILES['arquivo']['name'];
-	        $new_name = ''.strtr(utf8_decode($original_name), utf8_decode(' àáâãäçèéêëìíîïñòóôõöùúûüýÿÀÁÂÃÄÇÈÉÊËÌÍÎÏÑÒÓÔÕÖÙÚÛÜÝ'), '_aaaaaceeeeiiiinooooouuuuyyAAAAACEEEEIIIINOOOOOUUUUY');
+	        $new_name = ''.strtr(utf8_decode($original_name), utf8_decode(' àáâãäçèéêëìíîïñòóôõöùúûüýÿÀÁÂÃÄÇÈÉÊËÌÍÎÏÑÒÓÔÕÖÙÚÛÜÝ()[]{}'), '_aaaaaceeeeiiiinooooouuuuyyAAAAACEEEEIIIINOOOOOUUUUY______');
 	        $path = 'assets/frontend/documentos/eventos/'.'/'.$new_name;
 			$configuracao = array(
 	         'upload_path'   => './documentos/',
