@@ -55,6 +55,7 @@ $route['administrador'] = 'Usuarios/administrador';
 $route['evento'] = 'Eventos/cadastro_evento';
 $route['pesquisa'] = 'Pesquisas/cadastro_pesquisa';
 $route['documento'] = 'Documentos/cadastro_documento';
+$route['dadoedu'] = 'Documentos/cadastro_dadoedu';
 $route['pdes'] = 'Documentos/cadastro_pde';
 $route['midia'] = 'Midias/cadastro_midia';
 
@@ -79,5 +80,3 @@ $route['repositorio'] = 'Inicial/repositorio';
 
 $route['404_override'] = '';
 $route['translate_uri_dashes'] = FALSE;
-
-

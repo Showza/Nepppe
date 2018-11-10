@@ -3,7 +3,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 
 class Inicial extends CI_Controller {
 
-	
+
 	public function index()
 	{
 		$this->load->model('midias_model','model_eventos');
@@ -45,8 +45,9 @@ class Inicial extends CI_Controller {
 	public function basedados()
 	{
 		$this->load->model('documentos_model','model_documentos');
-		$dados['dados'] = $this->model_documentos->listar_dados();
+		$dados['docs'] = $this->model_documentos->listar_dados();
 		$dados['pdes'] = $this->model_documentos->listar_pdes();
+		$dados['dados'] = $this->model_documentos->listar_dadoedu();
 		$this->load->view('Template/Html-header',$dados);
 		$this->load->view('Template/Header');
 		$this->load->view('Basedados');

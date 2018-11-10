@@ -180,7 +180,7 @@
                     <a target="_blank" href="http://www.periodicos.capes.gov.br/"><span class="btn btn-neppe badge-pill">Acessar</span></a>
                 </li>
                 <li class="list-group-item-neppe d-flex justify-content-between align-items-center">ANPOCS - Associação Nacional de Pós-Graduação e Pesquisa em Ciências Sociais
-                    <a target="_blank" href="http//www.anpocs.com"><span class="btn btn-neppe badge-pill">Acessar</span></a>
+                    <a target="_blank" href="http://www.anpocs.com"><span class="btn btn-neppe badge-pill">Acessar</span></a>
                 </li>
                  <li class="list-group-item-neppe d-flex justify-content-between align-items-center">INEP
                     <a target="_blank" href="http://portal.inep.gov.br/indicadores-educacionais"><span class="btn btn-neppe badge-pill">Acessar</span></a>
